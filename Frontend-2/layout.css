@@ -1,0 +1,37 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap div{
+    background: pink;
+    flex-wrap: wrap;
+    width:30%;
+    margin:5px;
+}
+.big {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    background-color: tomato;
+    justify-content: center;
+    box-sizing: content-box;
+    padding: 50px;
+    margin: 7px;
+}
+.to {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.header {
+    background-color: teal;
+    padding: 20px;
+}
+
+.nav {
+    background-color: turquoise;
+    padding: 10px;
+}

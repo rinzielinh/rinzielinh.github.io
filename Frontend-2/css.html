@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend</title>
+
+</head>
+<style>
+.div {
+  display: flex;
+}
+.wrap {
+  display: flex;
+}
+.wrap div {
+    width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+</style>
+<body>
+  <div>This is div <div>
+  <header> Front end bai 2</header>
+  <nav>Layout</nav>
+  <main>This is main</main>
+  <aside>This is aside</aside>
+  
+  <!-- Qui tắc lớp: dùng hết thẻ div -->
+
+  Border : độ dày của box
+  Padding: Khoảng cách ở bên trong của box (lề trong)
+
+  Boxsizing: content (giá trị mặc định) # Boxsizing: border-box
+
+  Margin: Lề ngoài (4 giá trị: trên / dưới/ trái/ phải)
+  <br/>
+
+  <div>This is display block</div> 
+  <!-- có thẻ xét được các thuộc tính chiều dài, rộng.... -->
+  <div>This is display block</div>
+  <span>This is display inline</span> 
+  <!-- các thuộc tính height width ko có tác dụng ; margin bottom ko nhận , chỉ nhận margin left right nhưng nếu display inline block thì sẽ nhận -->
+  <span>This is display inline</span>
+
+  <div>This is display block</div> 
+
+
+
+  <!-- display flex -->
+
+  
+<div class="wrap">
+  <div class="item">the 1</div>
+  <div class="item">the 2</div>
+  <div class="item">the 3</div>
+  <div class="item">the 4</div>
+  <div class="item">the 5</div>
+  <div class="item">the 6<div>
+</div>
+
+
+<header style="background: lightblue;"> Header</header>
+
+<nav> Nav</nav>
+<div class="table">
+  <div>
+    <div class="wrap">
+      <div class="item">the 1</div>
+      <div class="item">the 2</div>
+      <div class="item">the 3</div>
+      <div class="item">the 4</div>
+      <div class="item">the 5</div>
+      <div class="item">the 6<div>
+    </div>
+    <div class="wrap">
+      <div class="item">the 1</div>
+      <div class="item">the 2</div>
+      <div class="item">the 3</div>
+      <div class="item">the 4</div>
+      <div class="item">the 5</div>
+      <div class="item">the 6<div>
+    </div>
+    
+     
+  </div>
+  <aside class="aside"></aside>
+</div>
+
+<!-- flex-grow:  nếu width vượt quá khổ của trang thì sẽ tính theo tỉ lệ giữa các thẻ -->
+</body>
+</html>
