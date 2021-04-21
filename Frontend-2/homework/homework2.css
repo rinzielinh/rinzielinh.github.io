@@ -1,0 +1,141 @@
+.hw1 {
+    justify-content: center;
+    width: 40%;
+    background-color: white;
+    text-align: center;
+    margin: 30px 400px;
+}
+.header {
+    background-color: teal;
+    padding: 40px;
+    margin: 3px;
+    border: solid;
+}
+.footer {
+    background-color: turquoise;
+    padding: 40px;
+    margin: 3px;
+    border: solid;
+}
+.thin {
+    width: 99%;
+    background-color: white;
+}
+.wrap {
+    display: flex;
+}
+.wrap div {
+    background: aquamarine;
+    width: 50%;
+    justify-content: space-around;
+    padding: 45px;
+    margin: 2px;
+}
+.wrap1 {
+    display:flex;
+}
+.wrap1 div {
+    justify-content: space-around;
+    padding: 45px;
+    margin: 2px;
+}
+.main {
+    width: 60%;
+    background-color: sandybrown;
+}
+.side {
+    background-color: slateblue;
+}
+
+
+
+
+
+
+.hw2 {
+    width: 40%;
+    text-align: center;
+    margin: 30px 400px;
+    border: solid;
+}
+.nav {
+    background-color: skyblue;
+    padding: 40px;
+    margin: 3px;
+    border: solid;
+}
+.content3 {
+    display:flex;
+    margin: 2px;
+    text-align: center;
+}
+
+.sidebar {
+    width: 20%;
+    /* padding: 20px 20px 180px; */
+    border: solid;
+    background-color:khaki;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.main2 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 66%;
+    background-color: plum;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: solid;
+   
+}
+
+
+
+.hw3 {
+    background-color: lightblue;
+    width: 40%;
+    text-align: center;
+    margin: 30px 400px;
+}
+.header3 {
+    background-color: rgb(43, 175, 175);
+    padding: 40px;
+    margin: 20px;
+    margin-top: 20px;
+
+}
+.content2 {
+    display:flex;
+    margin: 20px;
+    text-align: center;
+    height: 300px;
+}
+.main3 {
+    width: 80%;
+    background-color: plum;
+    margin-left: 2px;
+    margin-right: 2px; 
+}
+.aside {
+    width: 20%;
+    background-color: khaki;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-right: 20px;
+}
+.wrap3 {
+    display:flex;
+    margin: 10px;
+}
+.wrap3 div {
+    background-color: lightcoral;
+    width: 50%;
+    justify-content: space-around;
+    padding: 42px;
+    margin: 3px;
+} 
