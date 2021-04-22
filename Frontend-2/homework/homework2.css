@@ -9,13 +9,13 @@
     background-color: teal;
     padding: 40px;
     margin: 3px;
-    border: solid;
+    
 }
 .footer {
     background-color: turquoise;
     padding: 40px;
     margin: 3px;
-    border: solid;
+    
 }
 .thin {
     width: 99%;
@@ -91,6 +91,18 @@
     border: solid;
    
 }
+.header2 {
+    background-color: teal;
+    padding: 40px;
+    margin: 3px;
+    border: solid;
+}
+.footer2 {
+    background-color: turquoise;
+    padding: 40px;
+    margin: 3px;
+    border: solid;
+}
 
 
 
@@ -116,8 +128,7 @@
 .main3 {
     width: 80%;
     background-color: plum;
-    margin-left: 2px;
-    margin-right: 2px; 
+     
 }
 .aside {
     width: 20%;
@@ -131,11 +142,32 @@
 .wrap3 {
     display:flex;
     margin: 10px;
+    height: 40%;
+    justify-content: center;
+    /* align-items: center; */
 }
 .wrap3 div {
+    justify-content: center;
+    display: flex;
+    align-items: center;
     background-color: lightcoral;
-    width: 50%;
-    justify-content: space-around;
-    padding: 42px;
-    margin: 3px;
+    margin: 2%;
+    width: 30%;    
 } 
+.article {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+}
+.fe {
+    padding: 4px;
+}
+
+
+.hinh {
+    width: 40%;
+    text-align: center;
+    margin: 30px 400px;
+
+}
