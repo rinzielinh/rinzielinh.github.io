@@ -1,0 +1,202 @@
+From 6bac1044456e1994eb48266e92a94dc7a78ad17e Mon Sep 17 00:00:00 2001
+From: rinzielinh <75829392+rinzielinh@users.noreply.github.com>
+Date: Mon, 26 Apr 2021 10:12:19 +0700
+Subject: [PATCH] Final version of home work front end 3
+
+---
+ .DS_Store                   | Bin 8196 -> 8196 bytes
+ Frontend-3/.DS_Store        | Bin 0 -> 6148 bytes
+ Frontend-3/frontend3hw.css  |  33 ++++++++++++++++++-----------
+ Frontend-3/frontend3hw.html |  41 ++++++++++++++++++++----------------
+ 4 files changed, 44 insertions(+), 30 deletions(-)
+ create mode 100644 Frontend-3/.DS_Store
+
+diff --git a/.DS_Store b/.DS_Store
+index ed3a910ce541aad8a392411e42454417e17f5f0d..7a7e2263491a7aee2ad2577222266029f1339494 100644
+GIT binary patch
+delta 28
+gcmZp1XmQxUE5a?wz`&sT9}Fft2up4@6uHa|0Gh1}asU7T
+
+delta 28
+gcmZp1XmQxUE5hx;z`&sU9}Fft2up4@6uHa|0G`<ksQ>@~
+
+diff --git a/Frontend-3/.DS_Store b/Frontend-3/.DS_Store
+new file mode 100644
+index 0000000000000000000000000000000000000000..f22ec23d71a5266c9e1ddc41f0189d2ed94f615e
+GIT binary patch
+literal 6148
+zcmeHKJx{|h5PerFRD?if0Y;BZkt*0&qN)tc`~jLaP*5NhEkbNr_%ZxGegM3)t+we0
+zBOr7q-95+lJLg`aI0hiy=V1qE18C6|8#@eZOvlw%tPy**iQ;p-AV-GrWl;`RW?RQ!
+zR6w6y3j_2qMS_Lrmlb8kF?})4=_jAw*a8l5gC~@DBqwJa;uIrtJ8;ZYVvJYj8gcXi
+zg}w{(T#b_avxQvkjkyx$nqX4r<DLA)dpY=qzxEE~Xeq-!3RbUGOuP<b)|B9$Rphv>
+zuP$#(+&#`Jsl}Au$DP-3J@aFU$xAa+z!WeAeoX=H*=nubfEG;wQ@|9MDWKm6M^{WE
+zRssE|gTWsGh)s5TV_Sb2mE$6&5vzb4p-G?;16AS?Ljs-sF3w9MRsjPY5)U5|SC)7}
+z5x+X~J3k$g2DE4jm;!YLw!&pw_y3E{=l?p%u1o<_;9n^q&E8e7%aY>Wx>B6(wT^yG
+qSJQb_z!`-NzZG+?ZpFuRZ|ry4Af^$kfb5~!kARoKf+_H$3VZ=Aq-)Lq
+
+literal 0
+HcmV?d00001
+
+diff --git a/Frontend-3/frontend3hw.css b/Frontend-3/frontend3hw.css
+index 10f4795..9e4b03a 100644
+--- a/Frontend-3/frontend3hw.css
++++ b/Frontend-3/frontend3hw.css
+@@ -23,6 +23,7 @@
+     font-size: 20px;
+     position: fixed;
+     top: 0px;
++    z-index: 1;
+ }
+ .main-item {
+     flex-grow: 1;
+@@ -43,12 +44,25 @@ li.main-item:hover {
+     position: absolute;
+     top: 50px;
+     display: none;
++    left:0;
++    z-index: 2;
++}
++.sub-right {
++    background-color: lightcoral;
++    list-style: none;
++    position: absolute;
++    left: 100%;
++    /* left: 250px; */
++    top: 0px;
++    min-width: inherit;
++    display: none;
+ }
+ .small-sub {
+     list-style: none;
+     height: 90px;
+     position: relative;
+-    width: 240px;
++    width: 250px;
++    z-index: 3;
+ }
+ 
+ li.main-item.center:hover .sub {
+@@ -56,16 +70,6 @@ li.main-item.center:hover .sub {
+ 
+ }
+ 
+-.smaller {
+-    
+-    list-style: none;
+-    position: absolute;
+-    top: 40px;
+-    left: 260px;
+-    height: 50px;
+-    min-width: 120px;
+-    display: none; 
+-}
+ .smaller-sub {
+     list-style: none;
+    
+@@ -76,6 +80,11 @@ li.small-sub:hover .smaller {
+ 
+ }
+ 
++li.small-sub:hover .sub-right {
++    display: block;
++
++}
++
+ 
+ .button {
+     display: inline-block;
+@@ -98,7 +107,7 @@ li.small-sub:hover .smaller {
+   
+   .button span {
+     cursor: pointer;
+-    display: inline-block;
++    
+     position: relative;
+     transition: 0.5s;
+   }
+diff --git a/Frontend-3/frontend3hw.html b/Frontend-3/frontend3hw.html
+index aec29db..57fe246 100644
+--- a/Frontend-3/frontend3hw.html
++++ b/Frontend-3/frontend3hw.html
+@@ -20,28 +20,35 @@
+         <li class="main-item center">About us
+           <ul class="sub" >
+             <li class="small-sub center">Website
+-             <ul class="smaller-sub center">
+-               <li class="smaller center">Facebook</li>
++             <ul class="sub-right center">
++               <li class="small-sub center">Facebook</li>
+               </ul>
+           </ul>
+         </li>
+-        <li class="main-item center">Cateloge  
++        <li class="main-item center">Catelogue  
+           <ul class="sub" >
+             <li class="small-sub center">Gallery 1
+-             <ul class="smaller-sub center">
+-               <li class="smaller center">Portrait</li>
++              <ul class="sub-right">
++                <li class="small-sub center">Portrait 1</li>
++                <li class="small-sub center">Portrait 2</li>
++                <li class="small-sub center">Portrait 3</li>
++                
+               </ul>
+             </li>
+             <li class="small-sub center">Gallery 2
+-              <ul class="smaller-sub center">
+-               <li class="smaller center">Landscape</li>
+-              </ul>
+-            
++                <ul class="sub-right">
++                  <li class="small-sub center">Landscape</li>
++                  <li class="small-sub center">Landscape 2</li>
++                  <li class="small-sub center">Landscape 3</li>
++                  <li class="small-sub center">Landscape 4</li>
++                </ul>
+             </li>
+             <li class="small-sub center">Gallery 3
+-             <ul class="smaller-sub center">
+-               <li class="smaller center">Animals</li>
++              <ul class="sub-right">
++                <li class="small-sub center">Animal 1</li>
++                <li class="small-sub center">Animal 2</li>
+               </ul>
++              
+             </li>
+           </ul>
+         </li> 
+@@ -51,18 +58,16 @@
+         <li class="main-item center">Contact
+           <ul class="sub" >
+             <li class="small-sub center">Email
+-             <ul class="smaller-sub center">
+-               <li class="smaller center">rinzielinh@gmail.com</li>
++             <ul class="sub-right center">
++               <li class="small-sub center">rinzielinh@gmail.com</li>
+               </ul>
+           </ul>
+         </li>
+ 
+         <li class="main-item center">More info
+           <ul class="sub" >
+-            <li class="small-sub center">Instagram
+-             <ul class="smaller-sub center">
+-               <li class="smaller center">rinzie</li>
+-              </ul>
++            <li class="small-sub center">Instagram</li>
++             
+           </ul>
+         </li>
+         
+@@ -77,7 +82,7 @@
+ 
+   </div>
+  
+-  <button class="button" ><span><a href="#">Back to top</a></span>
++  <a href="#" class="button"><button class="button" >Back to top<span></span></a>
+    
+ 
+ 
+-- 
+2.24.3 (Apple Git-128)
+
