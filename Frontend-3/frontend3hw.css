@@ -55,6 +55,7 @@ li.main-item:hover {
     /* left: 250px; */
     top: 0px;
     min-width: inherit;
+    font-size: 80%;
     display: none;
 }
 .small-sub {
