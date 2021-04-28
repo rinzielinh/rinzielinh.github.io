@@ -13,6 +13,7 @@
     top: 0;
     text-align: center;
     color:white;
+    font-family: 'Lobster', cursive;
 }
 
 .banner {
@@ -24,7 +25,7 @@
 .slogan {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Original Surfer', cursive;
+    
     font-family: 'Pacifico', cursive;
     font-size: 40px;
     color: sandybrown;
@@ -81,7 +82,7 @@
 
 li.main-item:hover {
     background-color: lightsalmon;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .sub {
@@ -205,8 +206,6 @@ li.small-sub:hover .sub-right {
     position: absolute;
     bottom:-50px;
     left:20%;
-    font-family: 'Original Surfer', cursive;
-    
 }
 .item:hover .content{
     animation: go-up 1.5s forwards;
@@ -244,6 +243,22 @@ li.small-sub:hover .sub-right {
         
     }
 }
+.best-review {
+    display: flex;
+    flex-wrap: wrap;
+}
+.review {
+    flex-grow: 1;
+    margin-left: 40px;
+    margin-right: 20px;
+    width: 120px;
+    height: auto;
+    padding-bottom: 60px;
+    font-family: 'Original Surfer', cursive;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color:lightskyblue;
+}
 .featured {
     display: flex;
     flex-wrap: wrap;
@@ -259,8 +274,9 @@ li.small-sub:hover .sub-right {
     padding-top: 30px;
     font-family: 'Original Surfer', cursive;
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 25px;
     color: seagreen;
+    margin-bottom: 60px;
 
 }
 .sub-featured {
@@ -293,8 +309,8 @@ li.small-sub:hover .sub-right {
 }
 .category {
     flex-grow: 1;
-    padding: 100px;
-    margin: 10px;
+    padding: 60px;
+    margin: 20px;
 }
 .category:hover {
         opacity: 0.5;
@@ -302,11 +318,39 @@ li.small-sub:hover .sub-right {
 
 .upper-footer {
     margin-top: 100px;
+    max-width: 1700px;
 
+}
+.description {
+    margin-bottom: 40px;
 }
 
 .back-to-top {
+    color: lightsalmon;
     position: fixed;
     bottom: 20px;
-    left: 1000px;
+    left: 1300px;
+    font-size: 60px;
 }
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    margin-bottom: 60px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
