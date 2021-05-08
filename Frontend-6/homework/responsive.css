@@ -72,7 +72,7 @@
 }
 .img {
     width: 100%;
-    height: 400px;
+    height: auto;
     z-index: 1;
 }
 
@@ -88,7 +88,8 @@
     z-index: 0;
 
 }
-.orange:hover {
+
+.item:hover .orange {
     animation: opacity-incre 1.5s forwards;
 }
 
@@ -101,6 +102,8 @@
 
     }
 }
+
+
 .icon {
     position: absolute;
     top: 5%;
@@ -137,14 +140,7 @@
 
 }
 
-/* @keyframes go-up {
-    0% {
 
-    }
-    100% {
-        right: 70px;
-    }
-} */
 
 .img2 {
     width: 455px;
@@ -389,14 +385,15 @@ li:hover {
     .best {
         text-align: center;
     }
-    .orange {
-        display: none;
-    }
+    
 }
 
 @media screen and (min-width: 766px) {
     .logo {
         width: 95%;
+    }
+    .orange {
+        height: 960px;
     }
 }
 
@@ -423,6 +420,13 @@ li:hover {
     
   }
 
+  @media screen and (max-width: 990px) {
+      .orange {
+        height: 960px;
+        min-height: 428px;
+      }
+  }
+ 
   .nav-pills .nav-link.active, .nav-pills {
       background-color: whitesmoke;
       color: teal;
@@ -452,16 +456,16 @@ li:hover {
     
 
 }
-.black {
-      background-color: black ;
-      opacity: 0.5;
-      width:100%;
-      height: 150px;
-      position: absolute;
-      bottom: 0;
-      z-index: 3;
-  }
+
 
 .carousel-caption {
-    z-index: 10;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	width:100%;
+	left: auto;
+	right: auto;
+	bottom: 0;
+	height: 120px;
+	padding-top: 15px;
 }
+
