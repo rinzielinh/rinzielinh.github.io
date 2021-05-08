@@ -8,7 +8,7 @@
 }
 
 .top {
-    background-color: seagreen;
+    background-color: teal;
     width: 100%;
     height: 25px;
     position: static;
@@ -22,9 +22,13 @@
     width: 100%;
     z-index: 0;
     margin-top: 0px;
+    margin-bottom: 60px;
 }
 
-
+.salmon {
+    margin: 0;
+    text-align: center;
+}
 
 .slogan {
     font-family: 'Pacifico', cursive;
@@ -32,12 +36,10 @@
     color: sandybrown;
 }
 
-.logo {
-    /* width: 80%;
-    margin-left: 30%;
-    margin-right: 40%;  */
-    margin: 90px;
-}
+/* .logo {
+    
+
+} */
 *{
     margin: 0;
     padding: 0;
@@ -69,8 +71,9 @@
     overflow: hidden;
 }
 .img {
-    width: 260px;
-    height: 325px;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
 }
 
 
@@ -78,10 +81,11 @@
 .orange {
     position: absolute; 
     top:0;
-    width: 260px;
-    height: 325px;
+    width: 100%;
+    height: 400px;
     background-color: lightcoral;
     opacity: 0;
+    z-index: 0;
 
 }
 .orange:hover {
@@ -99,46 +103,52 @@
 }
 .icon {
     position: absolute;
-    top:10px;
-    left:-30px;
+    top: 5%;
+    right: 10%;
     font-family: 'Pacifico', cursive;
     font-size: 150%;
+    opacity: 0;
+    z-index: 2;
 }
 .item:hover .icon{
-    animation: go-right 1.5s forwards;
+    animation: appear 1.5s forwards;
 }
-@keyframes go-right {
+ @keyframes appear  {
     0% {
-
+        opacity: 0;
     }
     100% {
-        left:10%;
-
+        opacity: 100%;
     }
-}
+} 
 
 .content {
+    font-weight: 600;
     position: absolute;
-    bottom: 35%;
-    right: -40%;
+    bottom: 5%;
+    left: 10%;
+    opacity: 0;
+    z-index: 2;
+    color: black;
 }
+
 .item:hover .content{
-    animation: go-up 1.5s forwards;
+    animation: appear 1.5s forwards;
 
 }
 
-@keyframes go-up {
+/* @keyframes go-up {
     0% {
 
     }
     100% {
         right: 70px;
     }
-}
+} */
 
 .img2 {
     width: 455px;
-    height: 650px;
+    height: 640px;
     transition: 2s;
     
     /* animation: zoom 0.5s forwards ; */ 
@@ -165,6 +175,9 @@
     flex-wrap: wrap;
 }
 .review {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 260px;
     padding-top: 40px;
     padding-bottom: 60px;
     font-family: 'Original Surfer', cursive;
@@ -183,7 +196,7 @@
 
 }
 .price-tag {
-    flex-grow: 1;
+    
     padding-top: 30px;
     font-family: 'Original Surfer', cursive;
     font-family: 'Pacifico', cursive;
@@ -197,13 +210,22 @@
     overflow: hidden;
     
 }
-
+.small-sub-featured {
+    box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    background-color: #fff;
+    height: 21.5%;
+}
 .size {
     width: 90px;
     flex-grow: 1;
     margin-right: 18px;
-    margin-top: 9px;
+    margin-top: 7px;
     margin-bottom: 7px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    background-color: #fff;
+    height: 21.5%;
 
 }
 
@@ -215,10 +237,7 @@
 .sub-square {
     flex-grow: 1;
     display: flex;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
-    border-radius: 4px;
-    background-color: #fff;
-    height: 21.5%;
+    
     
 }
 .first {
@@ -258,20 +277,23 @@ li:hover {
     color: lightsalmon;
     position: fixed;
     bottom: 20px;
-    left: 1300px;
+    left: 90%;
     font-size: 60px;
 }
-
+.pagination {
+    margin-bottom: 70px;
+}
 .footer {
     max-width: 1700px;
     margin: 0 auto;
+    
 }
 
 .big-collection {
     display: flex;
     flex-wrap: wrap;
     margin-top: 170px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 .collection {
     flex-grow: 1;
@@ -298,12 +320,13 @@ li:hover {
 
 
 .top-footer {
-      background-color:seagreen;
+      background-color: teal;
       max-width: 1700px;
       /* width: 1200px; */
       height: 260px;
       color: white;
       text-align: center;
+      
   }
   .be-the-first { 
       font-weight: bold;
@@ -329,7 +352,7 @@ li:hover {
   .button {
     background-color: whitesmoke;
     border: none;
-    color:seagreen;
+    color:teal;
     padding: 14px 32px;
     text-align: center;
     font-size: 16px;
@@ -352,7 +375,7 @@ li:hover {
       font-size: 25px;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 765px) {
     .img {
       width: 100%;
       height: auto;
@@ -366,17 +389,79 @@ li:hover {
     .best {
         text-align: center;
     }
+    .orange {
+        display: none;
+    }
 }
 
-  @media screen and (max-width: 400px) {
+@media screen and (min-width: 766px) {
+    .logo {
+        width: 95%;
+    }
+}
+
+  @media screen and (max-width: 480px) {
     .img {
       width: 100%;
       height: auto;
     }
     .wholepage {
         width: 100%;
+        margin: 0 auto;
     }
     .logo {
-        width: 200px;
+        width: 80%;
+        margin-top: 30%;
     }
+    .best {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .collection {
+        max-width: 300px;
+    }
+    
   }
+
+  .nav-pills .nav-link.active, .nav-pills {
+      background-color: whitesmoke;
+      color: teal;
+  }
+  
+  .small-footer {
+      display: none;
+
+  }
+
+  @media screen and (max-width: 770px) {
+      .small-footer {
+          display: block;
+      }
+      .big-footer {
+          display: none;
+      }
+  }
+
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+      width: 4rem;
+      height: 4rem;
+  }
+
+.carousel slide {
+    position: relative;
+    
+
+}
+.black {
+      background-color: black ;
+      opacity: 0.5;
+      width:100%;
+      height: 150px;
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+  }
+
+.carousel-caption {
+    z-index: 10;
+}
