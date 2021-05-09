@@ -279,6 +279,13 @@ li:hover {
 .pagination {
     margin-bottom: 70px;
 }
+
+.wrap-slide {
+    margin-bottom: 60px;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .footer {
     max-width: 1700px;
     margin: 0 auto;
@@ -286,15 +293,13 @@ li:hover {
 }
 
 .big-collection {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 170px;
+    
     margin-bottom: 30px;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 .collection {
-    flex-grow: 1;
     margin-bottom: 40px;
-    
 }
 
 
@@ -303,6 +308,7 @@ li:hover {
     max-height: 240px;
     border-radius: 4px;
     transition: 2s;
+    overflow: hidden;
 }
 .desc-img:hover {
     transform: scale(1.2);
@@ -310,8 +316,8 @@ li:hover {
 
 .desc {
     margin-left: 20px;
-   width: 200px; 
-
+    width: 150px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -469,3 +475,6 @@ li:hover {
 	padding-top: 15px;
 }
 
+.nav-link {
+    color: lightcoral;
+}
