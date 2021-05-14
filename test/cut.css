@@ -1,0 +1,230 @@
+    .wrap-menu {
+        display: flex;
+        padding: 27px 10%;
+    }
+    
+    .wrap-menu .left img {
+        height: 19px;
+        width: 75px;
+    }
+    
+    .left {
+        width: 50%;
+    }
+    
+    .right {
+        width: 50%;
+        display: flex;
+    }
+    
+    .wrap {
+        max-width: 1920px;
+    }
+    
+    .menu ul {
+        display: flex;
+    }
+    
+    .menu ul li {
+        list-style: none;
+        margin-right: 20px;
+        font-size: 14px;
+        color: #333333;
+        color: #333333;
+        font-family: YoonGothic700-50;
+    }
+    
+    .avatar {
+        cursor: pointer;
+    }
+    
+    .banner {
+        background-image: url("./img/png/Rectangle.png");
+        height: 800px;
+        z-index: 0;
+    }
+    
+    .title {
+        z-index: 2;
+    }
+    
+    .content-image {
+        background-image: url("./img/png/DSC08338_2.png");
+        height: 719px;
+        width: 1920px;
+    }
+    
+    .banner {
+        text-align: center;
+    }
+    
+    .main-title {
+        text-align: center;
+    }
+    
+    .action {
+        width: 308px;
+        height: 56px;
+        margin: 64px 209px 0;
+        padding: 18px 61px 18px 62px;
+        border: solid 1px #ffffff;
+        background-color: transparent;
+        margin-left: 800px;
+        margin-top: 300px;
+        color: white;
+        font-size: 15px;
+    }
+    
+    .top-image {
+        margin-left: 360px;
+        margin-right: 360px;
+        margin-top: 30px;
+    }
+    
+    .title-topimage {
+        height: 122px;
+    }
+    
+    .title {
+        /* font-family: YoonGothic700-70; */
+        line-height: 40px;
+        font-size: 25px;
+    }
+    
+    .sub-title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .content4 img {
+        width: 100%;
+    }
+    
+    .content-title {
+        text-align: center;
+        font-size: 32px;
+        padding-top: 60px;
+    }
+    
+    .content-sub-title {
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .content4 {
+        padding-left: 238px;
+        padding-right: 238px;
+    }
+    
+    .content4-title {
+        font-size: 20px;
+        line-height: 28px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    .content4-sub-title {
+        font-size: 15px;
+        line-height: 22px;
+        padding-left: 10px;
+    }
+    
+    .content4-wrap {
+        background-color: white;
+        height: 140px;
+    }
+    
+    .middle-page {
+        margin-top: 50px;
+    }
+    
+    .col.sm-box {
+        text-align: center;
+        padding: 10px 30px;
+        border: solid gray;
+    }
+    
+    .col.sm-title {
+        margin: 10px;
+    }
+    
+    .footer {
+        background-color: #495e79;
+        color: white;
+    }
+    
+    .orange-box {
+        background-color: #ffffff;
+        padding: 0px 56px;
+        width: 236px;
+        height: 200px;
+        margin-right: 60px;
+    }
+    
+    .lower-line {
+        display: flex;
+    }
+    
+    .logo-footer img {
+        height: 19px;
+        width: 75px;
+    }
+    
+    .logo-footer {
+        margin-left: 160px;
+        margin-top: 10px;
+    }
+    
+    .footer-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icon {
+        margin: 5px;
+    }
+    
+    .line {
+        margin-left: 160px;
+    }
+    
+    .footer {
+        margin-top: 100px;
+    }
+    
+    .col.five-lines {
+        margin-top: 34px;
+    }
+    
+    .text-left {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .text-right {
+        margin-top: 120px;
+        text-align: right;
+        font-size: 13px;
+    }
+    
+    .arrow-left {
+        float: right;
+    }
+    
+    .polaroid {
+        width: 386.7px;
+        height: 150px;
+        margin: 0 0.7px 0 0;
+        padding: 30px 60.7px 30px 20px;
+        box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+    }
+    
+    .number {
+        font-size: 25px;
+        line-height: 40px;
+    }
