@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <script>
+        // Bài 3
+        let arr = [8, false, 'Nhem', undefined, '49'];
+        arr2 = [
+            null, {
+                name: 'Linh',
+                age: 29
+            },
+            [
+                ['-34'],
+                [-996]
+            ], 1.987, NaN
+        ];
+
+        let checkType = (arr) => {
+            return 'arr[0]: ' + typeof(arr[0]) + ', arr[1]: ' + typeof(arr[1]) + ', arr[2]:' + typeof(arr[2]) + ', arr[3]: ' + typeof(arr[3]) + ', arr[4]: ' + typeof(arr[4]);
+        };
+
+        console.log('checkType(' + JSON.stringify(arr) + ') :>> ', checkType(arr));
+        console.log('checkType(' + JSON.stringify(arr2) + ') :>> ', checkType(arr2));
+
+
+        //Bài 4:
+
+        let array = [576, 7457, 3, 6, 834, 874, 23, 4657, 36, 87, 22, 121];
+        let array1 = [23, 4657, 36, 87, 22, 121];
+
+        let checkNumber = (numbers) => {
+            if (numbers[5] % 2 == 0) {
+                return 'Even';
+            } else {
+                return 'Odd';
+            }
+        };
+
+        console.log('checkNumber(' + JSON.stringify(array) + '); :>> ', checkNumber(array));
+        console.log('checkNumber(' + JSON.stringify(array1) + '); :>> ', checkNumber(array1));
+
+
+        //Bài 5:
+        let banA = {
+            name: 'Linh',
+            age: 29,
+            dob: "16 / 04 / 1992"
+        };
+
+        let banB = {
+            name: 'Kostya',
+            age: 31,
+            dob: "28 / 07 / 1990"
+        };
+
+        let hello = (person) => {
+            return 'Xin chào, tôi tên là ' + person.name + ' năm nay tôi ' + person.age + ' tuổi, rất vui được làm quen với bạn';
+        };
+
+        console.log('hello(' + JSON.stringify(banB) + '); :>> ', hello(banB));
+        console.log('hello(' + JSON.stringify(banA) + '); :>> ', hello(banA));
+    </script>
+
+</body>
+
+</html>
