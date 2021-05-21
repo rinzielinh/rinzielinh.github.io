@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript3hw</title>
+</head>
+
+<body style="font-family: 'Courier New', monospace;">
+    <script>
+        //bai 1:
+        printTriangle = (height) => {
+            if (height <= 2) {
+                alert('Enter an integer bigger than 2');
+            }
+            var str = '';
+            for (var i = 0; i < height; i++) {
+                for (var j = i + 1; j < height; j++) {
+                    str += ' * ';
+
+                }
+                str += '<br/>';
+            }
+            return str;
+        }
+
+
+
+
+
+        document.write(printTriangle(8));
+
+        // cách 1
+        // printEmptyRectangle = (width, height) => {
+        //     if (height <= 2 && width <= 2) {
+        //         alert('Enter 2 integers bigger than 2');
+        //     }
+        //     var str = '';
+        //     for (var i = 0; i < height; i++) {
+        //         for (var j = 0; j < width; j++) {
+
+        //             if (j > 0 && j < (width - 1) && i > 0 && i < (height - 1)) {
+        //                 str = str + '&nbsp;';
+        //             } else {
+        //                 str += '*'
+        //             }
+        //         }
+        //         str += '<br/>';
+        //     }
+        //     return str;
+        // }
+
+
+
+        // cách 2
+
+        case1 = (width) => {
+            var str = '';
+            for (var c = 0; c < width; c++) {
+                str += '*&nbsp;';
+            }
+            return str;
+        }
+
+        case2 = (width) => {
+            var str = '*&nbsp;';
+            for (var c = 0; c < width - 2; c++) {
+                str += '&nbsp;&nbsp;';
+            }
+            str += '*'
+            return str;
+        }
+
+        printEmptyRectangle = (height, width) => {
+            var star = '';
+            for (var r = 0; r < height; r++) {
+                if (r == 0 || r == height - 1) {
+                    star += case1(width) + '<br/>';
+                } else {
+                    star += case2(width) + '<br/>';
+                }
+            }
+            return star;
+        }
+
+
+
+
+        document.write(printEmptyRectangle(5, 8));
+
+
+
+        // for (var i = 0; i <= 9; i++) {
+        //     for (var j = 0; j <= 9; j++) {
+        //         // In ra vị trí của ma trận [i][j]
+        //         document.write("([" + i + "][" + j + "])");
+        //     }
+        //     // Xuống hàng
+        //     document.write("<br/>");
+        // }
+    </script>
+
+</body>
+
+</html>
