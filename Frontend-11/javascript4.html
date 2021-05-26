@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StringArray</title>
+</head>
+
+<body>
+    <script>
+        new Date();
+        new Date().getDay();
+        new Date().getMonth();
+
+        // let str = " Hello I'm techmaster student."
+        // let str2 = str.slpit(' ');
+
+        var txt = "a,b,c,d,e"; // String
+        txt.split(","); // Split on commas
+        txt.split(" "); // Split on spaces
+        txt.split("|"); // Split on pipe
+
+
+        var cut = (str) => {
+            if (typeof(str) !== 'string') {
+                alert('Enter text')
+                return
+            }
+            if (str.lenght <= 8) {
+                return str;
+            } else {
+                let kq = `${str.slice(0,9)}...`;
+                return kq
+            }
+        }
+        var a = cut('Hello Im techmaster student')
+        console.log('a :>> ', a);
+
+
+        var numbers = [4, 5, 9];
+        var newarr = numbers.sort(function(a, b) {
+            return b - a;
+        })
+
+
+        // push & unshift :  them cuoi hem dau
+        // pop & shift: cat cuoi cat dau
+
+        // splice (index, howmany,  item1, ..., itemX)
+        // .join()
+
+        // Ham dao nguoc reverse()
+
+        console.log('newarr :>> ', newarr);
+
+        var tung = 'Toi ten la tung';
+        var array = tung.split('');
+        var reverseArr = array.reverse();
+        var upperCase = reverseArr.shift().toUpperCase();
+        var reverseString = reverseArr.join('').toLocaleLowerCase();
+
+
+        var finalArr = upperCase.concat('', reverseString);
+        console.log('array :>> ', array);
+        console.log('reverseArr :>> ', reverseArr);
+        console.log('upperCase :>> ', upperCase);
+
+        console.log('reverseString :>> ', reverseString);
+
+        console.log('finalArr :>> ', finalArr);
+    </script>
+</body>
+
+</html>
