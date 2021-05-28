@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bai 1:
+
+        const isEmpty = (obj) => {
+            if (Object.keys(obj).length === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        banA = {};
+        banB = {
+            name: 'Nhem',
+            age: 4
+        };
+        console.log('isEmpty(banA) :>> ', isEmpty(banA));
+        console.log('isEmpty(banA) :>> ', isEmpty(banB));
+
+        //Bai 2:
+        var company = [{
+            name: 'Linh',
+            salary: 1000
+        }, {
+            name: 'Nhem',
+            salary: 500
+        }, {
+            name: 'Kostya',
+
+        }, {
+            name: 'Mup',
+            salary: 800
+        }, {
+            name: 'Grumpy cat',
+            salary: null
+        }, {
+            name: 'Baby Shark',
+            salary: undefined
+        }]
+
+        const sumSalary = (arr) => {
+            var total = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i]['salary'] !== null && arr[i]['salary'] !== undefined) {
+                    total += arr[i]['salary'];
+
+                }
+            }
+            return total;
+        }
+        console.log('sumSalary(company) :>> ', sumSalary(company));
+
+        //Bai 3:
+        let studentA = {
+            age: 22,
+            name: 'Tung',
+            sayHi: function() {
+                alert('Hi');
+            }
+        }
+        let studentB = {
+            age: 20,
+            name: 'Kien',
+        }
+
+
+        sayHello = (obj) => {
+            if (typeof obj['sayHi'] === "function") {
+                obj['sayHi']();
+            } else {
+                alert('hello');
+            }
+        }
+
+
+
+        sayHello(studentA);
+        sayHello(studentB);
+
+
+
+        //Bai 4:
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu cafedev"
+        };
+
+        // for (var key in myObject) {
+        //     if (myObject.hasOwnProperty(key)) {
+        //         myObject[key] *= 2;
+        //     }
+        // }
+        const multiplyNumeric = (myObject) => {
+            Object.keys(myObject).map(function(key, index) {
+                if (typeof myObject[key] === "number") {
+                    myObject[key] *= 2;
+                }
+            });
+            return myObject;
+        }
+
+
+        console.log('multiplyNumeric(menu) :>> ', multiplyNumeric(menu));
+
+
+        // Bai 5:
+
+        function Calculators(a, b) {
+            this.a = a;
+            this.b = b;
+            this.sum = function(a, b) {
+                return this.a + this.b;
+            };
+            this.mul = function(a, b) {
+                return this.a * this.b;
+            }
+        }
+        var Calculator = new Calculators(5, 10);
+        console.log('Calculator :>> ', Calculator);
+        console.log('Calculator.sum :>> ', Calculator.sum());
+        console.log('Calculator.mul :>> ', Calculator.mul());
+
+
+        // var excercise = {
+        //     a: 5,
+        //     b: 10,
+        //     sum: function(a, b) {
+        //         return this.a + this.b;
+        //     },
+        //     mul: function(a, b) {
+        //         return this.a * this.b;
+        //     }
+        // };
+
+        // console.log('excercise sum:>> ', excercise.sum());
+        // console.log('excercise mul :>> ', excercise.mul());
+
+        //Bai 6:
+
+        const array = [{
+            title: '1234',
+            id: 2
+        }, {
+            title: 'day la ko la con cua id nao',
+            id: 6
+        }, {
+            title: 'ĐEN VÂU',
+            parent: 6,
+            id: 9
+        }, {
+            title: 'xin chao các bạn',
+            parent: 2,
+            id: 3
+        }, {
+            title: 'Một triệu like',
+            parent: 6,
+            id: 69
+        }];
+
+        const print = (arr) => {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i]['parent'] !== null && arr[i]['parent'] !== undefined) {
+                    console.log(`${arr[i].title} - có id là ${arr[i].id} - parent id là ${arr[i].parent}`);
+                } else {
+                    console.log(`${arr[i].title} - có id là ${arr[i].id} `);
+                }
+            }
+
+        }
+
+        print(array);
+
+
+
+
+        // Bai 7: 
+        const descending = (arr) => {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        let descended = descending([3, 46, -78, 344, -4232, 7, -400]);
+        console.log('descended :>> ', descended);
+    </script>
+</body>
+
+</html>
