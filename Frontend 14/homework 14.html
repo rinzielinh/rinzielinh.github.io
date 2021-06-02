@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14homework</title>
+</head>
+
+<body>
+    <script>
+        //Bài 1:
+        function getDateAgo(date, days) {
+            let weekday = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+            let weekReverse = ['SU', 'SA', 'FR', 'TH', 'WE', 'TU', 'MO']
+            if (date.getDay() >= days) {
+                return weekday[date.getDay() - days];
+            } else {
+                return weekReverse[Math.abs(date.getDay() - days)];
+            }
+        }
+        let date = new Date(2021, 5, 2); // 2 June 2021
+
+        console.log('getDateAgo(date (2 June 2021),2) :>> ', getDateAgo(date, 2));
+        console.log('getDateAgo(date (2 June 2021),3) :>> ', getDateAgo(date, 3));
+        console.log('getDateAgo(date (2 June 2021),5) :>> ', getDateAgo(date, 5));
+        console.log('getDateAgo(date (2 June 2021),7) :>> ', getDateAgo(date, 7));
+
+
+        //Bài 2:
+
+        // function getDateAgo2(date, days) {
+        //     date.setDate(date.getDate() - days);
+        //     return date.getDate();
+        // }
+
+        function getDateAgo2(date, days) {
+            let dateCopy = new Date(date);
+
+            dateCopy.setDate(date.getDate() - days);
+            return dateCopy.getDate();
+        }
+
+        let dateBegin = new Date(2021, 5, 2); // 2 June 2021
+
+
+        console.log('getDateAgo2(dateBegin (2 June 2021), 1) :>> ', getDateAgo2(dateBegin, 1));
+        console.log('getDateAgo2(dateBegin (2 June 2021), 2) :>> ', getDateAgo2(dateBegin, 2));
+        console.log('getDateAgo2(dateBegin (2 June 2021), 365) :>> ', getDateAgo2(dateBegin, 365));
+
+        // Bài 3:
+        // năm nhuận là năm chia hết cho 4
+
+        function getLastDayOfMonth(year, month) {
+            let date = new Date(year, month + 1, 0);
+            return date.getDate();
+        }
+
+        console.log('getLastDayOfMonth(2019, 1) :>> ', getLastDayOfMonth(2019, 1));
+        console.log('getLastDayOfMonth(2020, 1) :>> ', getLastDayOfMonth(2020, 1));
+        console.log('getLastDayOfMonth(2021, 4) :>> ', getLastDayOfMonth(2021, 4));
+
+        // Bài 4:
+
+        function getSecondsToTomorrow() {
+            let now = new Date();
+            let hour = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+            let totalSecondsInADay = 24 * 60 * 60;
+
+            return totalSecondsInADay - totalSecondsToday;
+        }
+        console.log('getSecondsToTomorrow() :>> ', getSecondsToTomorrow());
+
+        //Bài 5:
+        function formatDate(date) {
+            let dayOfMonth = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            let hour = date.getHours();
+            let minutes = date.getMinutes();
+            let diffMs = new Date() - date;
+            let diffSec = Math.round(diffMs / 1000);
+            let diffMin = diffSec / 60;
+            let diffHour = diffMin / 60;
+
+            // formatting
+            year = year.toString().slice(-2);
+            month = month < 10 ? '0' + month : month;
+            dayOfMonth = dayOfMonth < 10 ? '0' + dayOfMonth : dayOfMonth;
+            hour = hour < 10 ? '0' + hour : hour;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+
+            if (diffSec < 1) {
+                return 'right now';
+            } else if (diffMin < 1) {
+                return `${diffSec} sec. ago`
+            } else if (diffHour < 1) {
+                return `${diffMin} min. ago`
+            } else {
+                return `${dayOfMonth}.${month}.${year} ${hour}:${minutes}`
+            }
+        }
+
+
+        console.log('formatDate(new Date(new Date - 1)) :>> ', formatDate(new Date(new Date - 1)));
+
+        console.log('formatDate(new Date(new Date - 30 * 1000)) :>> ', formatDate(new Date(new Date - 30 * 1000)));
+
+        console.log('formatDate(new Date(new Date - 5 * 60 * 1000)) :>> ', formatDate(new Date(new Date - 5 * 60 * 1000)));
+
+        console.log('formatDate(new Date(new Date - 86400 * 1000)) :>> ', formatDate(new Date(new Date - 86400 * 1000)));
+
+
+        //Bai 6:
+        function diffSubtract(date1, date2) {
+            return (Math.abs(date2 - date1) / (86400 * 1000)) + ' days';
+        }
+        let date1 = new Date(2021, 5, 2);
+        let date2 = new Date(2021, 4, 2);
+        console.log('diffSubtract(date1, date2) :>> ', diffSubtract(date1, date2));
+    </script>
+</body>
+
+</html>
