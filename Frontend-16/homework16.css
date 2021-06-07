@@ -1,0 +1,19 @@
+.banner {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+img {
+    width: 1400px;
+}
+
+.countdown {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 0px;
+    position: absolute;
+    top: 70px;
+    left: 450px;
+}

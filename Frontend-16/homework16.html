@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 16</title>
+    <link rel="stylesheet" href="./homework16.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="./countdown.jpg" alt="">
+        <div class="countdown" id="demo"></div>
+    </div>
+
+
+
+    <div id="myList">
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque sapien et libero hendrerit varius. Fusce posuere risus arcu, quis pharetra lorem iaculis a. Maecenas sed mi vel felis auctor laoreet ac in nisl. Nulla quis semper quam.
+            Vestibulum interdum urna at urna faucibus, eget pellentesque purus dignissim. Duis dolor justo, sagittis id malesuada aliquet, ornare vel orci. Vestibulum imperdiet vulputate velit, non luctus lacus vulputate sed. Etiam eleifend tellus at
+            velit aliquet aliquam. Nullam semper sapien tortor, ut mattis tellus elementum id. Proin quis felis lacinia metus lacinia tincidunt at sit amet nulla. Nulla et rutrum diam. Integer blandit sem sem, non venenatis nunc faucibus sit amet.
+
+        </p>
+        <p id="p2">Sed elementum tortor et nunc elementum maximus. Proin eu enim ex. Sed auctor pulvinar purus, vitae vehicula metus tincidunt vitae. Sed sit amet luctus tellus. Quisque feugiat, felis sed mollis cursus, justo lorem condimentum odio, sit amet blandit
+            ipsum ligula a risus. Cras ultrices quam vel erat sodales, nec iaculis magna luctus. Donec nisi ante, hendrerit ut sagittis in, facilisis eu ligula. Sed dolor lorem, blandit nec fermentum vestibulum, accumsan vel risus. Nulla hendrerit magna
+            enim, vitae sagittis sapien fermentum ultrices. Proin ut porta magna. Suspendisse potenti. Donec ipsum enim, tincidunt eget volutpat vehicula, interdum id nisl.
+
+        </p>
+        <p id="p3">Etiam scelerisque sollicitudin quam, egestas euismod ligula. Nunc tincidunt turpis non eros suscipit pulvinar. Etiam imperdiet, urna a placerat imperdiet, dolor velit hendrerit erat, sed mollis tellus tortor nec metus. Etiam facilisis elit nec
+            lobortis fringilla. Pellentesque in elit sed turpis aliquam sollicitudin. Cras metus est, tincidunt a consectetur nec, bibendum sed enim. Quisque vitae commodo urna. Nulla semper massa sed dolor vulputate, quis ultrices turpis malesuada.
+        </p>
+
+        <p id="p3"></p>
+
+
+
+        <div>
+            <p id="changeSize">Text to change font size</p>
+        </div>
+
+        <button onclick="changeColor()">Change Color</button>
+        <button onclick="changeBgColor()">Change Background Color</button>
+        <button onclick="copyContent()">Copy Content</button>
+        <button onclick="fSize()">Change FontSize</button>
+        <button id="button1" value="larger" type="button" onclick="changeFontSize(this)">Increase FontSize</button>
+        <button id="button2" vale="smaller" type="button" onclick="changeFontSize(this)">Decrease FontSize</button>
+
+
+    </div>
+
+
+
+</body>
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + " DAYS   " + hours + " : " +
+            minutes + " : " + seconds;
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Happy New year!!!";
+        }
+    }, 1000);
+
+
+    const changeColor = () => {
+        var list = document.getElementsByTagName('p');
+
+        for (i = 0; i < list.length; i++) {
+            if (i === 0) {
+                list[i].style.color = 'blue';
+            } else if (i === 1) {
+                list[i].style.color = 'yellow';
+            } else {
+                list[i].style.color = 'red';
+            }
+        }
+    }
+
+    const changeBgColor = () => {
+        document.body.style.backgroundColor = "lightpink"
+    }
+
+    const copyContent = (paragraph1, paragraph2) => {
+        var select = document.getElementById('p2');
+        var clone = select.cloneNode(true);
+        document.getElementById('p1').appendChild(clone);
+
+    }
+
+
+
+    const fSize = () => {
+        document.getElementById('p1').style.fontSize = '20px';
+        document.getElementById('p2').style.fontSize = '20px';
+        document.getElementById('p3').style.fontSize = '20px';
+    }
+
+
+    function changeFontSize(target) {
+        var changeSize = document.getElementById("changeSize");
+        var computedStyle = window.getComputedStyle ?
+            getComputedStyle(changeSize) :
+            changeSize.currentStyle;
+        var fontSize;
+
+        if (computedStyle) {
+            fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+
+            if (target == document.getElementById("button1")) {
+                fontSize += 5;
+
+            } else if (target == document.getElementById("button2")) {
+                fontSize -= 5;
+            }
+            changeSize.style.fontSize = fontSize + "px";
+        }
+    }
+</script>
+
+</html>
