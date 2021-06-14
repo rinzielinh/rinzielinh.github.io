@@ -1,0 +1,88 @@
+body {
+    background-color: #ffd900;
+}
+
+#my-game {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip-card-text {
+    width: 100%;
+    text-align: center;
+}
+
+.flip-card {
+    padding-bottom: 20px;
+    background-color: transparent;
+    width: 20%;
+    /* height: 20%; */
+    perspective: 1000px;
+    margin: auto;
+    max-width: 150px;
+}
+
+.flip-card-back {
+    height: 150px;
+}
+
+.flip-card-event {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* .flip-card-inner:hover {
+    transform: rotateY(180deg);
+} */
+
+.flip-card-front,
+.flip-card-second {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-second img {
+    width: 100%;
+    height: 150px;
+}
+
+.flip-card-front {
+    filter: grayscale(1);
+}
+
+.flip-card-second {
+    transform: rotateY(180deg);
+}
+
+.flip-card-second img {
+    width: 100%;
+    height: 150px;
+}
+
+h1 {
+    font-size: 50pt;
+    font-family: 'Luckiest Guy';
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-family: 'Luckiest Guy';
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 12px 10px rgba(0, 0, 0, 0.15), 0px 15px 2px rgba(0, 0, 0, 0.1);
+}
