@@ -1,0 +1,180 @@
+body {
+    background-color: #ffd900;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#timer {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#btn {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#my-game {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip-card-text {
+    width: 100%;
+    text-align: center;
+}
+
+.flip-card {
+    padding-bottom: 20px;
+    background-color: transparent;
+    width: 20%;
+    /* height: 20%; */
+    perspective: 1000px;
+    margin: auto;
+    max-width: 150px;
+}
+
+.flip-card-back {
+    height: 150px;
+}
+
+.flip-card-event {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* .flip-card-inner:hover {
+    transform: rotateY(180deg);
+} */
+
+.flip-card-front,
+.flip-card-second {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-second img {
+    width: 100%;
+    height: 150px;
+}
+
+.flip-card-front {
+    filter: grayscale(1);
+}
+
+.flip-card-second {
+    transform: rotateY(180deg);
+}
+
+.flip-card-second img {
+    width: 100%;
+    height: 150px;
+}
+
+h1 {
+    font-size: 50pt;
+    font-family: 'Luckiest Guy';
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-family: 'Luckiest Guy';
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f, 0px 12px 10px rgba(0, 0, 0, 0.15), 0px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+    background: #ffe9e9;
+    transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
+
+button#play-game {
+    margin-left: 650px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
