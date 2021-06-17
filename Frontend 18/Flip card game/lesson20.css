@@ -173,7 +173,7 @@ button.learn-more:active::before {
 }
 
 button#play-game {
-    margin-left: 650px;
+    margin-left: 45%;
     margin-bottom: 60px;
     margin-top: 50px;
     font-family: 'Press Start 2P', cursive;
