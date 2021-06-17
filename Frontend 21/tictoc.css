@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lato:wght@300&display=swap");
+:root {
+    --bg-color: #fefeff;
+    --primary-color: #4a6884;
+    --secondary-color: #3a98d4;
+    --tertiary-color: #65c6eb;
+    --gray-color: #91a2ab;
+    --light-color: #f0f4fe;
+    --win-background-color: rgba(214, 230, 234, 0.9);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.title {
+    font-family: "Balsamiq Sans", cursive;
+    font-size: 42px;
+    color: var(--primary-color);
+    margin: 40px 0px 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 10px 0px 40px;
+}
+
+
+/* Game Container */
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30%);
+    grid-auto-rows: 120px;
+    justify-content: center;
+    gap: 0px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.game-container .item {
+    border: 1px solid var(--gray-color);
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: var(--light-color);
+}
+
+
+/* Marcar casilla, X */
+
+.item.x-turn:before,
+.item.x-turn:after {
+    content: " ";
+    position: absolute;
+    height: 120px;
+    width: 4px;
+    background-color: var(--tertiary-color);
+}
+
+.item.x-turn:before {
+    transform: rotate(45deg);
+}
+
+.item.x-turn:after {
+    transform: rotate(-45deg);
+}
+
+.item.x-turn {
+    cursor: not-allowed;
+}
+
+
+/* Marcar casilla, O */
+
+.item.o-turn:before {
+    content: " ";
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border: 4px solid var(--secondary-color);
+    border-radius: 50%;
+    display: block;
+    margin: 10px;
+}
+
+.item.o-turn {
+    cursor: not-allowed;
+}
+
+
+/* Texto jugador actual */
+
+#current-player,
+#current-player.x-turn {
+    font-family: "Balsamiq Sans", cursive;
+    color: var(--tertiary-color);
+}
+
+#current-player.o-turn {
+    font-family: "Balsamiq Sans", cursive;
+    color: var(--secondary-color);
+}
+
+
+/* Mensaje ganador */
+
+.win-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--win-background-color);
+    color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    font-family: "Balsamiq Sans", cursive;
+    font-size: 64px;
+    flex-direction: column;
+}
+
+.win-message.show {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    background-color: var(--gray-color);
+    border-radius: 4px;
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 12px 14px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    color: var(--primary-color);
+}
+
+.item {
+    font-family: "Balsamiq Sans", cursive;
+    color: var(--tertiary-color);
+    font-size: 110px;
+}
+
+div#board {
+    margin-top: 5%;
+}
