@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamequiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./gamequiz.css">
+</head>
+
+<body>
+    <h1>Quiz Game</h1>
+    <div id="timer"></div>
+    <div id="level">
+        <input type="radio" id="pack1" name="pack" value="easy" checked>Easy</input>
+        <input type="radio" id="pack2" name="pack" value="normal">Normal</input>
+        <input type="radio" id="pack3" name="pack" value="hard">Hard</input>
+    </div>
+
+    <br>
+    <button id="play-game">Play</button>
+    <div class="quiz-container">
+        <div id="quiz"></div>
+        <ul></ul>
+
+    </div>
+
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button id="submit">Submit Quiz</button>
+    <button id="checkAnswer">Check Correct Answers</button>
+    <div id="results"></div>
+
+
+
+
+    </div>
+    <script src="gamequiz.js"></script>
+</body>
+
+</html>
