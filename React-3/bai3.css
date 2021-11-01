@@ -1,0 +1,26 @@
+.slide-button {
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: pink;
+    position: relative;
+}
+
+.slide-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+}
+
+.slide-button.off::before {
+    transform: translate(0px, -5px)
+}
+
+.slide-button.on::before {
+    transform: translate(30px, -5px);
+    background-color: rebeccapurple;
+}
