@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Alata', sans-serif;
+}
+
+.header {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 50px !important;
+}
+
+.product-thumbnail {
+    height: 200px;
+    overflow: scroll;
+}
+
+p.product-price {
+    color: red;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.nameBrand {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-pic {
+    max-width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin: 10px;
+}
+
+.product {
+    margin: 70px 20px;
+    max-width: 147px;
+}
+
+.justify-end {
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+h3.product-title {
+    height: 50px;
+    overflow: scroll;
+    margin: 10px 0;
+    text-align: center;
+}
+
+p.product-category {
+    text-align: center;
+    color: grey;
+}
+
+label {
+    margin-left: 5px;
+}
+
+p.rating {
+    font-size: smaller;
+    color: coral;
+}
+
+span {
+    font-size: smaller;
+    color: coral;
+}
+
+.col-1 {
+    flex-basis: 8.3333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-2 {
+    flex-basis: 16.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-3 {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-4 {
+    flex-basis: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-5 {
+    flex-basis: 41.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-6 {
+    flex-basis: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-7 {
+    flex-basis: 58.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-8 {
+    flex-basis: 66.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-9 {
+    flex-basis: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-10 {
+    flex-basis: 83.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-11 {
+    flex-basis: 91.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-12 {
+    flex-basis: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
