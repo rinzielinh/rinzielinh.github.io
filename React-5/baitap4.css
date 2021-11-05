@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Alata', sans-serif;
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.loading .boxLoading {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loading .boxLoading::before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow 0.5s linear infinite;
+}
+
+.loading .boxLoading::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #B28FCE;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+        transform: translateY(18px) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1);
+    }
+}
+
+.header {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 50px !important;
+}
+
+.product-thumbnail {
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+}
+
+p.product-price {
+    color: red;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.nameBrand {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin: 10px;
+}
+
+.product {
+    margin: 70px 20px;
+    max-width: 147px;
+}
+
+.justify-end {
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+h4.product-title {
+    height: 50px;
+    overflow: scroll;
+    margin: 10px 0;
+    text-align: center;
+}
+
+p.product-category {
+    text-align: center;
+    color: grey;
+}
+
+label {
+    margin-left: 5px;
+}
+
+p.rating {
+    font-size: smaller;
+    color: coral;
+}
+
+span {
+    font-size: smaller;
+    color: coral;
+}
+
+.col-1 {
+    flex-basis: 8.3333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-2 {
+    flex-basis: 16.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-3 {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-4 {
+    flex-basis: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-5 {
+    flex-basis: 41.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-6 {
+    flex-basis: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-7 {
+    flex-basis: 58.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-8 {
+    flex-basis: 66.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-9 {
+    flex-basis: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-10 {
+    flex-basis: 83.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-11 {
+    flex-basis: 91.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-12 {
+    flex-basis: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
