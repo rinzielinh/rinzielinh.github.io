@@ -1,0 +1,134 @@
+.searchInputs {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input-area {
+    display: flex;
+}
+
+.search input {
+    background-color: #fff;
+    border-radius: 99px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #f6f5f7;
+    font-size: 14px;
+    padding: 15px;
+    height: 40px;
+    width: 600px;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    height: 40px;
+    width: 30px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchIcon svg {
+    font-size: 28px;
+}
+
+.dataResult {
+    position: absolute;
+    margin-top: 10px;
+    width: 600px;
+    height: 300px;
+    border-radius: 9px;
+    background-color: #f6f5f7;
+    box-shadow: black rbga(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+
+.dataResult .dataItem {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.dataItem p {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.wrap-dataItem:hover {
+    background-color: rgba(233, 220, 236, 0.596);
+    cursor: pointer;
+}
+
+.wrap-dataItem {
+    padding: 5% 0;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.search-reasult-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: medium;
+    font-weight: 900;
+}
+
+.search-reasult-price {
+    color: #d62727;
+    font-weight: 900;
+}
+
+.search-reasult-author {
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (max-width: 1000px) {
+    .search input {
+        width: 300px;
+    }
+    .dataResult {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 430px) {
+    .searchInputs {
+        margin-left: 0;
+    }
+    .dataResult {
+        left: 0;
+        width: fit-content;
+    }
+    .search-reasult-title {
+        max-height: 70px;
+        overflow: hidden;
+    }
+    .search input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 330px) {
+    .search input {
+        width: 140px;
+    }
+}
