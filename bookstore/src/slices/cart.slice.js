@@ -7,7 +7,6 @@ const cartSlice = createSlice({
     initialState: localStorage.getItem("cart") ?
         JSON.parse(localStorage.getItem("cart")) : [],
     reducers: {
-
         addItem(state, action) {
             const item = state.find((book) => book.bookId == action.payload);
             if (item) item.quantity += 1;

@@ -8,6 +8,13 @@
     align-items: center;
 }
 
+.noti {
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 h1 {
     text-align: center;
 }
@@ -64,7 +71,7 @@ img {
 .button {
     margin-top: 3%;
     width: 100%;
-    background-color: #de2454 !important;
+    background-color: salmon !important;
     font-family: IBM Plex Sans, sans-serif;
     font-weight: 600;
     border-radius: 9999px;
@@ -79,7 +86,7 @@ img {
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
     border-width: 1px;
-    border-color: #de2454;
+    border-color: salmon;
     align-items: center;
     justify-content: center;
     --text-opacity: 1;
@@ -87,8 +94,42 @@ img {
     color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: medium;
+}
+
+.slide-mobile {
+    display: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    display: none;
+}
+
+@media (max-width: 766px) {
+    .slide-big {
+        display: none;
+    }
+    .slide-mobile {
+        display: block;
+    }
+}
+
 @media (max-width: 385px) {
     .button {
         font-size: 10px;
+    }
+    .navbar-brand {
+        margin-right: 0;
     }
 }

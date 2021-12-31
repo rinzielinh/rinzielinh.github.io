@@ -41,10 +41,18 @@ const ProductDetail = () => {
   const totalItems = selectTotalItems(state);
   const totalPrice = selectTotalPrice(state);
   const books = getAll();
+    
   const selectedItem = books.find((p) => p.bookId == id);
+        
+  const renderList = books.filter((item) => item.bookId !== selectedItem.bookId)
+  
+  
 
 
-
+  const handleBuy = (data) => {
+    dispatch(addItem(data))
+    setShowModal(true);
+  }
 
 
   return (
@@ -53,33 +61,35 @@ const ProductDetail = () => {
 
       <Container className="mainPDP">
         <Row>
-          <Col sm={4}>
+          <Col lg={4} md={12}>
             <div className="book-img shadow-book">
               <div className="book-cover-shadow"></div>
               <img src={selectedItem.cover} alt="" />
             </div>
           </Col>
-          <Col sm={8}>
+          <Col lg={8} md={12}>
             <div className="book-infomation">
               <div className="book-name">{selectedItem.title}</div>
               <div className="author">{selectedItem.author} (Author)</div>
               <div className="price">Price: ${selectedItem.price}</div>
               <div className="add-to-basket">
-                <Button  onClick={() => setShowModal(true)}>Add to basket</Button>
+                <button className="button"  onClick={() => handleBuy(selectedItem.bookId)}><i className="bi bi-cart3"></i>  Add to basket</button>
                 {showModal && (<div className="modal-container">
                   <Row className="modal-box">
                     <Col>
                       <img className="modal-img" src={selectedItem.cover} alt="" />
                     </Col>
                     <Col>
-                      <div className="book-info">Book information: </div>
-                      <div className="modal-title">Name: {selectedItem.title}</div>
-                      <div className="modal-author">Author: {selectedItem.author}</div>
-                      <div className="modal-price">Price: ${selectedItem.price}</div>
-
+                    <div className="book-info">{selectedItem.title}</div>                      
+                      <div>is now in your basket  </div>
+                      { totalItems >2 && <div>with {totalItems - 1} other items</div>}
+                      
                     </Col>
+                    <Link  to={"/" +"cart"}>
                     <div className="modal-button">
-                      <button className="modal-button-check" onClick={() => dispatch(addItem(selectedItem.bookId))}>Check out</button></div>
+                      <button className="modal-button-check">CHECK OUT (${totalPrice})</button>
+                    </div>
+                    </Link>
                     <div className="modal-button">
                       <button className="modal-button-keep" onClick={() => setShowModal(false)}>Keep Shopping</button>
                     </div>
@@ -93,6 +103,7 @@ const ProductDetail = () => {
 
               <div className="book-des">Description</div>
               <div className="detail-des">
+              <br></br>
                 <strong>
                   *THE SUNDAY TIMES BESTSELLER*</strong>
                 <br></br>
@@ -113,12 +124,12 @@ const ProductDetail = () => {
                 <li>Language:</li>
                 <li>Type:</li>
               </ul>
-              <ul>
-                <li>Price:</li>
-                <li>Publisher:</li>
-                <li>Publish Date:</li>
-                <li>Language:</li>
-                <li>Type:</li>
+              <ul className="book-details-rightCol">
+                <li>${selectedItem.price}</li>
+                <li>PPenguin Books Ltd</li>
+                <li>7 June 2018</li>
+                <li>English</li>
+                <li>Paperback</li>
               </ul>
             </div>
             <div className="book-des">Earn By Promoting Books</div>
@@ -129,12 +140,27 @@ const ProductDetail = () => {
 
       <div className="container-swiper">
         
-        <Swiper modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
+        <Swiper className="slide-big" modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
           {
-            books.map((book) => <SwiperSlide key={book.bookId} >
+            renderList.map((book) => <SwiperSlide key={book.bookId} >
 
               <div className="product-img">
-                <Link to={"bestsellers/book/" + book.bookId}>
+                <Link to={"/home/book/" + book.bookId}>
+                  <img className="swiper-img" src={book.cover} style={{ height: "100%" }} alt={book.title} /></Link>
+              </div>
+
+            </SwiperSlide>
+            )
+          }
+
+        </Swiper>
+
+        <Swiper className="slide-mobile" modules={[Navigation]} navigation slidesPerView={3} spaceBetween={10}>
+          {
+            renderList.map((book) => <SwiperSlide key={book.bookId} >
+
+              <div className="product-img">
+                <Link to={"/home/book/" + book.bookId}>
                   <img className="swiper-img" src={book.cover} style={{ height: "100%" }} alt={book.title} /></Link>
               </div>
 

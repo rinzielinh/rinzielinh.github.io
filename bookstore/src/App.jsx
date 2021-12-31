@@ -27,8 +27,9 @@ const App = () => {
               <img className="logo" src="https://rails-assets-eu.bookshop.org/assets/logo_dark-0d5fc34a5dbaf62c3b832d243e2d3234e3b2b550f8842cd59d34ba1fcb94479a.svg" alt="" />
             </NavLink>
           </Navbar.Brand>
+          <div className="big-search">
           <Searchbar placeholder="Enter a Book Name" data={books} />
-
+          </div>
 
           <div className="wrap-ham">
             
@@ -47,11 +48,12 @@ const App = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink to="/" className="nav-link" >Home</NavLink>
-              <NavLink to="home" className="nav-link" >All books</NavLink>
-  
-              <NavLink className="nav-link" to="text">Text</NavLink>
-              <NavLink className="nav-link" to="bestsellers">Bestsellers</NavLink>
+              <div className="small-search">
+                <Searchbar placeholder="Enter a Book Name" data={books} />
+              </div>
+              <NavLink to="/" className="nav-link" >HOME</NavLink>
+              <NavLink to="home" className="nav-link" >COLLECTIONS</NavLink>
+              <NavLink className="nav-link" to="bestsellers">BESTSELLERS</NavLink>
               <NavLink to="cart" className="nav-link cart">
                 <i className="bi bi-cart3"></i>
                 {totalItem > 0 && (
@@ -67,31 +69,6 @@ const App = () => {
       </Navbar>
 
 
-      {/* <Navbar  bg="light" expand="lg">
-          <Container className="wrap-navbar">
-            <Link to="/" className="navbar-brand">
-              <img className="logo" src="https://rails-assets-eu.bookshop.org/assets/logo_dark-0d5fc34a5dbaf62c3b832d243e2d3234e3b2b550f8842cd59d34ba1fcb94479a.svg" alt=""/>
-            </Link>
-            <Searchbar placeholder="Enter a Book Name" data={books}/>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  <NavLink  to="home" className="nav-link" >Home</NavLink>
-                  <NavLink  className="nav-link" to="text">Text</NavLink>
-                  <NavLink  className="nav-link" to="bestsellers">Bestsellers</NavLink>
-                
-                </Nav>
-              </Navbar.Collapse>
-              <Link className="cart" to="cart" className="nav-link cart">
-                    <i className="bi bi-cart3"></i>
-                    {totalItem > 0 && (
-                      <span className="total-item">{totalItem}</span>
-                    )}
-                    
-              </Link>
-            </Container>
-          </Navbar> */}
-
       <div>
         <Outlet />
       </div>
@@ -101,12 +78,12 @@ const App = () => {
       <footer className="footer">
         <Container>
           <Row>
-            <Col xs={12} md={4}>
+            <Col xs={12} sm={12} lg={3}>
               <ul className="footer-group center">
                 <img className="footer-logo" src="https://rails-assets-eu.bookshop.org/assets/logo_light-5021bfa2b02119f3ca9fc756c6837d4961c19a8978122c61aa355247f34c7ff5.svg" alt="" />
               </ul>
             </Col>
-            <Col>
+            <Col className="footer-mobile" xs={12} sm={6} lg={3}>
               <ul className="footer-group">CONTACT</ul>
               <ul>
                 <li className="footer-bullet">+1123456789</li>
@@ -115,7 +92,7 @@ const App = () => {
               </ul>
             </Col>
 
-            <Col>
+            <Col className="footer-mobile"  xs={12} sm={6} lg={3}>
               <ul className="footer-group">OPEN HOURS</ul>
               <ul>
                 <li className="footer-bullet">WEEKDAYS: 10AM – 9PM</li>
@@ -124,7 +101,7 @@ const App = () => {
               </ul>
             </Col>
 
-            <Col xs={3}>
+            <Col className="footer-mobile"  xs={12} sm={12} lg={3}>
               <ul className="footer-group">
                 <div className="follow-us">Follow us</div>
               </ul>

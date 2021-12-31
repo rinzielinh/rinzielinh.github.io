@@ -9,20 +9,32 @@ import './Home.css'
 
 
 const Home = () => {
-    
+    const [showModal, setShowModal] = useState(false);
     const dispatch = useDispatch();
     
     const books = getAll();
 
+    const handleAdd = (data) => {
+        dispatch(addItem(data))
+        setShowModal(true);
+    }
+
     return (
             <Container className="home">
-                {/* <Row>
+                <Row>
                     <Col>
-                    <h2>All books</h2>
-                    <button onClick={() => setShowModal(true)}>Add to cart</button>
-                    {showModal && <Modal hide={() => setShowModal(false)} />}
+                    {showModal && (<div className="modal-container">
+                  <Row className="modal-box">
+                  <div className="center noti">Successfully added to your basket</div>
+                   
+                    <div className="modal-button">
+                      <button className="modal-button-keep" onClick={() => setShowModal(false)}>Keep Shopping</button>
+                    </div>
+                  </Row>
+
+                </div>) }
                     </Col>
-                </Row> */}
+                </Row>
                 <Row className="all-books">
                     {
                         books.map((book) => <Col key={book.bookId} xs={6} sm={6} md={4} lg={3} xl={3} xxl={2}>
@@ -47,7 +59,7 @@ const Home = () => {
                                     
                                 </div>
                                 <div className="addToCart" >
-                                    <button className="button" onClick={() => dispatch(addItem(book.bookId))}>Add to basket</button>
+                                    <button className="button" onClick={() => handleAdd(book.bookId) }> <i className="bi bi-cart3"></i>  Add to basket</button>
                                     
                                     </div>
                                 

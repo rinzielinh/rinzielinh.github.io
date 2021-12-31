@@ -11,13 +11,28 @@ import "swiper/css/navigation"
 import "../App.css"
 import "swiper/css";
 
+
 const About = () => {
   const books = getAll();
   const best = getBest();
   return (
     <main>
+      <div className="mobile-banner">
+      <div className="banner">             
+              <img className="banner-img" src="https://rails-assets-eu.bookshop.org/assets/hero_background_desktop-bdea5ff1b7738dc04c1b1b220544450664cc37c9c090ccb6dd999d3806e9a7de.jpg" alt=""/>
+            </div>
+      </div>
 
       <div className="wrap-section-banner">
+        <div className="caption">
+          <div className="top-caption">Costa Books Awards shortlist</div>
+          <div className="section-img">
+            <img className="avatar" src="https://bookshop-uk-prod-images.storage.googleapis.com/spree/affiliate_profiles/profile_images/398/original/PGWells_logo.jpg?1603896318" alt="" /><span>  By P&G Wells Booksellers</span>
+          </div> 
+
+           
+        </div>
+
         <div className="section-banner">
           <div className="banner-grid">
             <div className="col-grid">
@@ -54,30 +69,33 @@ const About = () => {
               <img srcSet="https://images-eu.bookshop.org/images/9780241482797.jpg?height=500&v=v4-67fc9ee5088d467ce6f355a9b8f7a38c" alt="" />
               <img srcSet="https://images-eu.bookshop.org/images/9781838852610.jpg?height=500&v=v4" alt="" />
             </div>
-
+           
           </div>
+          
         </div>
-
+       
       </div>
+      
 
-      <Container>
+      <Container className="wrap-news">
+      
         <Row>
-          <h2>News</h2>
+          <h2>News</h2> 
         </Row>
         <Row className="news">
-          <Col>
+          <Col xl={3} sm={6} xs={6}>
           <img src="https://dauntbooks.co.uk/wp-content/uploads/2021/04/Tim-Marshall-e1619182334745-280x180.jpeg.webp" alt=""/>
           <div className="news-title">An Online Talk with Tim Marshall<a href="https://dauntbooks.co.uk/tim-marshall-the-power-of-geography/"></a></div>
-          </Col>
-          <Col>
+          </Col >
+          <Col xl={3} sm={6} xs={6}>
           <img src="https://dauntbooks.co.uk/wp-content/uploads/2021/03/Indelicacy-280x180.jpg.webp" alt=""/>
           <div className="news-title">Indelicacy shortlisted for the Rathbones Folio Prize<a href="https://dauntbooks.co.uk/indelicacy-shortlisted-for-rathbones-folio-prize/"></a></div>
           </Col>
-          <Col>
+          <Col xl={3} sm={6} xs={6}>
           <img src="https://dauntbooks.co.uk/wp-content/uploads/2020/07/Alexander-McCall-Smith-desk-1313416-280x180.jpg.webp" alt=""/>
           <div className="news-title">A special treat from Alexander Mccall Smith<a href="https://dauntbooks.co.uk/a-special-treat-from-alexander-mccall-smith/"></a></div>
           </Col>
-          <Col>
+          <Col xl={3} sm={6} xs={6}>
           <img src="https://dauntbooks.co.uk/wp-content/uploads/2020/07/Real-Life-REPRINT-280x180.jpg.webp" alt=""/>
           <div className="news-title">Real Life shortlisted for Booker Prize<a href="https://dauntbooks.co.uk/shop/books/real-life/"></a></div>
           </Col>
@@ -127,7 +145,7 @@ const About = () => {
           </div>
           <div className="slogan">Books you'll probably want to keep!</div>
         </div>
-        <Swiper modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
+        <Swiper className="slide-big" modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
           {
             best.map((book) => <SwiperSlide key={book.bookId} >
 
@@ -141,7 +159,25 @@ const About = () => {
           }
 
         </Swiper>
+
+        <Swiper className="slide-mobile" modules={[Navigation]} navigation slidesPerView={3} spaceBetween={10}>
+          {
+            best.map((book) => <SwiperSlide key={book.bookId} >
+
+              <div className="product-img">
+                <Link to={"bestsellers/book/" + book.bookId}>
+                  <img className="swiper-img" src={book.cover} style={{ height: "100%" }} alt={book.title} /></Link>
+              </div>
+
+            </SwiperSlide>
+            )
+          }
+
+      </Swiper>
       </div>
+
+    
+
       <div className="container-swiper">
         <div className="section">
           <div className="section-img">
@@ -149,7 +185,25 @@ const About = () => {
           </div>
           <div className="slogan">Memories and Reminiscences</div>
         </div>
-        <Swiper modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
+        <Swiper className="slide-big" modules={[Navigation]} navigation slidesPerView={5.5} spaceBetween={10}>
+          {
+            books.map((book) => <SwiperSlide key={book.bookId} >
+
+
+              <Link to={"book/" + book.bookId}>
+                <div className="product-img">
+                  <img className="swiper-img" src={book.cover} alt={book.title} />
+                </div>
+              </Link>
+
+
+            </SwiperSlide>
+            )
+          }
+
+        </Swiper>
+
+        <Swiper className="slide-mobile" modules={[Navigation]} navigation slidesPerView={3} spaceBetween={10}>
           {
             books.map((book) => <SwiperSlide key={book.bookId} >
 
@@ -168,12 +222,19 @@ const About = () => {
         </Swiper>
       </div>
 
+     
+
+      
       <div className="signup-section">
         <div >
           <div className="signup-title">Sign up for our Newsletter</div>
           <p className="sub-signup-title">Tell us what books you love.</p>
+          <div className="sub-signup-title">Email:  <input type="text" className="form-input"></input></div>
+         
+            
+          
         </div>
-        <div className="signup-button"><Button>SIGN UP</Button></div>
+        <div className="signup-button"><button className="button">SIGN UP</button></div>
 
       </div>
 

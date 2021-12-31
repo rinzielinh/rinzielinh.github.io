@@ -1,6 +1,6 @@
 .mainPDP.container {
     padding: 0 15%;
-    margin-top: 10%;
+    margin-top: 13%;
     margin-bottom: 10%;
 }
 
@@ -30,8 +30,13 @@
 
 .book-name {
     font-family: GT Super Bold, serif;
-    font-size: 34px !important;
+    font-size: 30px;
     font-weight: 600;
+}
+
+.book-info {
+    font-weight: 600;
+    font-family: GT Super Bold, serif;
 }
 
 .available {
@@ -44,20 +49,35 @@
 .book-des {
     margin-top: 10%;
     font-family: GT Super Bold, serif;
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: -0.4px;
     line-height: 1.2;
     font-weight: 600;
 }
 
+.detail-des {
+    margin-top: 20px;
+}
+
 .book-details {
     display: flex;
+    margin-top: 20px;
+}
+
+.book-details-rightCol {
+    margin-left: 20px;
 }
 
 .price {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: #de2454;
+    font-weight: 600;
+}
+
+.add-to-basket {
+    width: fit-content;
 }
 
 .modal-container {
@@ -149,4 +169,11 @@
     text-transform: uppercase;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+    .book-name {
+        margin-top: 20px;
+        font-size: 22px;
+    }
 }

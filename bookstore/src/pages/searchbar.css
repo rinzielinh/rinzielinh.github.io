@@ -22,7 +22,7 @@
     font-size: 14px;
     padding: 15px;
     height: 40px;
-    width: 600px;
+    width: 400px;
 }
 
 .searchIcon {
@@ -47,7 +47,7 @@ input:focus {
 .dataResult {
     position: absolute;
     margin-top: 10px;
-    width: 600px;
+    width: 400px;
     height: 300px;
     border-radius: 9px;
     background-color: #f6f5f7;
@@ -110,6 +110,12 @@ input:focus {
     }
 }
 
+@media (max-width: 766px) {
+    .search input {
+        width: 100%;
+    }
+}
+
 @media (max-width: 430px) {
     .searchInputs {
         margin-left: 0;
@@ -121,14 +127,5 @@ input:focus {
     .search-reasult-title {
         max-height: 70px;
         overflow: hidden;
-    }
-    .search input {
-        width: 200px;
-    }
-}
-
-@media (max-width: 330px) {
-    .search input {
-        width: 140px;
     }
 }

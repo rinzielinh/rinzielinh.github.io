@@ -10,29 +10,6 @@
     background-color: coral;
 }
 
-.banner {
-    margin-bottom: 4rem;
-    height: 650px;
-    background-color: #573ba3;
-}
-
-.banner-img {
-    position: relative;
-    margin-top: 50px;
-    margin-top: 100px;
-}
-
-.banner-title {
-    font-family: GT Super Bold, serif;
-    color: pink;
-    font-size: 3.5rem;
-    width: 50%;
-    position: absolute;
-    bottom: 30%;
-    top: 0;
-    left: 25%;
-}
-
 .col-grid {
     width: 30%;
     margin-right: 4px;

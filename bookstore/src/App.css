@@ -36,7 +36,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 }
 
 .footer {
-    margin-top: 10%;
+    margin-top: 3%;
     background-color: #2b0f42;
     text-align: start;
     color: white;
@@ -120,7 +120,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 .section {
     display: flex;
-    margin-top: 10%;
+    margin-top: 6%;
     margin-bottom: 2%;
 }
 
@@ -161,14 +161,32 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 }
 
 .signup-title {
-    padding-right: 3rem;
-    font-family: IBM Plex Sans, sans-serif;
+    text-align: start;
+    font-family: GT Super Bold, serif;
     font-size: 30px;
     font-weight: 600;
 }
 
 .sub-signup-title {
+    font-family: GT Super Bold, serif;
     text-align: start;
+}
+
+.form-input {
+    background-color: #fff;
+    border-radius: 99px;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #f6f5f7;
+    font-size: 14px;
+    padding: 15px;
+    height: 40px;
+    width: 300px;
+}
+
+.mobile-banner {
+    display: none;
 }
 
 .wrap-section-banner {
@@ -178,6 +196,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
     margin-bottom: 1rem;
     height: 13rem;
     overflow: hidden;
+    position: relative;
 }
 
 .section-banner {
@@ -188,12 +207,41 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
     margin-right: auto;
 }
 
+.caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    font-family: IBM Plex Sans, sans-serif;
+    color: white;
+}
+
+.top-caption {
+    font-family: GT Super Bold, serif;
+    font-size: xxx-large;
+}
+
 .banner-grid {
     width: 55%;
     transform: rotate(-30deg) translate(0%, -27.5%);
     max-height: 200%;
     width: 60%;
     display: flex;
+}
+
+.banner-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.banner {
+    height: fit-content;
+    background-color: #573ba3;
 }
 
 .cart-mobile {
@@ -207,8 +255,13 @@ h2 {
     line-height: 3.2;
 }
 
+.wrap-news {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 .news {
-    padding: 0 60px;
+    margin-top: 20px !important;
 }
 
 .news-title {
@@ -228,12 +281,17 @@ h2 {
     margin-right: 20%;
 }
 
+.small-search {
+    display: none;
+}
+
+.me-auto.navbar-nav {
+    margin-top: 10px;
+}
+
 @media (max-width: 998px) {
     .container-swiper {
         padding: 2% 5%;
-    }
-    a.navbar-brand {
-        width: 30% !important;
     }
     .cart-mobile {
         margin-right: 5%;
@@ -242,17 +300,45 @@ h2 {
     .cart {
         display: none !important;
     }
-    .navbar-brand {
-        display: none;
-    }
     .container {
         width: 100% !important;
+    }
+    a.nav-link.active {
+        box-sizing: border-box;
+        border-radius: 9px;
+        border-width: 0.5px;
+        border-style: double;
+        border-color: #0000005c;
+    }
+    .navbar-nav .nav-link {
+        padding-right: 0;
+        text-align: center;
+    }
+    .footer-logo {
+        width: 40%;
+    }
+    .wrap-section-banner {
+        display: none;
+    }
+    .mobile-banner {
+        display: block;
     }
 }
 
 @media (max-width: 766px) {
     .footer-logo {
         width: 40%;
+    }
+    .big-search {
+        display: none;
+    }
+    .small-search {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .news {
+        padding: 0 0;
     }
 }
 
@@ -269,14 +355,23 @@ h2 {
         width: 3rem;
         ;
     }
-    .signup-title {
-        font-size: 18px;
-    }
     .sub-signup-title {
-        font-size: 14px;
+        font-size: 12px;
     }
     .footer-logo {
-        width: 40%;
+        width: 50%;
+    }
+    .wrap-cart-mobile {
+        margin-right: 7%;
+    }
+    .footer-mobile {
+        padding-left: 20% !important;
+    }
+    .form-input {
+        width: fit-content;
+    }
+    .signup-title {
+        font-size: 13px;
     }
 }
 
@@ -295,5 +390,30 @@ h2 {
     }
     .button {
         font-size: 10px;
+    }
+    .navbar {
+        flex-wrap: nowrap;
+    }
+    .navbar-light .navbar-toggler {
+        border: none;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: white;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+    .footer-group {
+        font-size: 15px;
+    }
+    .form-input {
+        width: 150px;
+    }
+    .signup-title {
+        font-size: 12px;
+    }
+    .sub-signup-title {
+        font-size: 12px;
     }
 }
