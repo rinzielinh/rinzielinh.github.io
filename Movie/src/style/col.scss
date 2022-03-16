@@ -1,0 +1,94 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1360px, xxxl: 1860px);
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1300px, xxxl: 1800px);
+@import '~bootstrap/scss/bootstrap';
+.col-1 {
+    -ms-flex-preferred-size: 8.3333333%;
+    flex-basis: 8.3333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-2 {
+    -ms-flex-preferred-size: 16.666667%;
+    flex-basis: 16.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-3 {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-4 {
+    -ms-flex-preferred-size: 33.333333%;
+    flex-basis: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-5 {
+    -ms-flex-preferred-size: 41.333333%;
+    flex-basis: 41.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-6 {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-7 {
+    -ms-flex-preferred-size: 58.333333%;
+    flex-basis: 58.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-8 {
+    -ms-flex-preferred-size: 66.666667%;
+    flex-basis: 66.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-9 {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-10 {
+    -ms-flex-preferred-size: 83.333333%;
+    flex-basis: 83.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-11 {
+    -ms-flex-preferred-size: 91.666667%;
+    flex-basis: 91.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-12 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
