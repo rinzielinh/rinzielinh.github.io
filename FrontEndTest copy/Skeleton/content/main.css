@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "SkyText-Bold";
+    src: url("fonts/sky_text_bold.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_bold.woff") format("woff"), url("fonts/sky_text_bold.ttf") format("truetype"), url("fonts/sky_text_bold.svg#SkyText-Bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SkyText-Medium";
+    src: url("fonts/sky_text_medium.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_medium.woff") format("woff"), url("fonts/sky_text_medium.ttf") format("truetype"), url("fonts/sky_text_medium.svg#SkyText-Medium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SkyText-Regular";
+    src: url("fonts/sky_text_regular.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_regular.woff") format("woff"), url("fonts/sky_text_regular.ttf") format("truetype"), url("fonts/sky_text_regular.svg#SkyText-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sports-FO";
+    src: url("fonts/SSportsFo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/SSportsFo-MediumItalic.woff") format("woff"), url("fonts/SSportsFo-MediumItalic.ttf") format("truetype"), url("fonts/SSportsFo-MediumItalic.svg#Sports-FO") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "SkyText-Regular", "Helvetica", "Arial", "Sans-Serif";
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h2,
+h3,
+p,
+a,
+th,
+td {
+    color: #fff;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.dashboard-profile__text h2 {
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.header__inner {
+    width: 100%;
+    min-height: 60px;
+}
+
+img.header-img {
+    width: 10%;
+    float: right;
+    margin: 30px 100px;
+}
+
+.dashboard-main {
+    display: flex;
+}
+
+main#main {
+    margin-top: 30px;
+}
+
+.dashboard-profile {
+    position: relative;
+    background-color: rgb(26, 24, 24);
+}
+
+h3.total-points {
+    width: 60%;
+    text-align: center;
+    font-size: small;
+}
+
+.dashboard-profile::before {
+    content: "";
+    background-image: url('images/profile.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+}
+
+li.dashboard-race.dashboard-race--it {
+    background-image: url('images/race--it.png');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 7%;
+}
+
+li.dashboard-race.dashboard-race--gb {
+    background-image: url('images/race--gb.png');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 7%;
+}
+
+li.dashboard-race.dashboard-race--de {
+    background-image: url('images/race--de.png');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 7%;
+}
+
+img.race-track-img {
+    width: 35%;
+}
+
+span.sub-best-score {
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+    font-size: 28px;
+    text-align: center;
+}
+
+.gp {
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.dashboard-race__info {
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.dashboard-race-h2 {
+    font-size: 16px;
+}
+
+span {
+    display: block;
+}
+
+.dashboard-profile__performance {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.dashboard-profile__helment {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+
+.total-score {
+    font-size: 60px;
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+}
+
+h3.sub-dashboard-profile {
+    padding: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.span-sub-dashboard-profile {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.dashboard-extra {
+    display: flex;
+}
+
+.dashboard__prize {
+    background-image: url('images/prize-bg.png');
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    margin-right: 4%;
+}
+
+.dashboard__share {
+    background-image: url('images/share-bg.png');
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prize-img {
+    width: 50%;
+}
+
+.share-our-advert {
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+}
+
+.win {
+    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 20px;
+}
