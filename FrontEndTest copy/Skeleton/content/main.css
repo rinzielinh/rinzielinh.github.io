@@ -1,218 +1,434 @@
-@font-face {
-    font-family: "SkyText-Bold";
-    src: url("fonts/sky_text_bold.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_bold.woff") format("woff"), url("fonts/sky_text_bold.ttf") format("truetype"), url("fonts/sky_text_bold.svg#SkyText-Bold") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SkyText-Medium";
-    src: url("fonts/sky_text_medium.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_medium.woff") format("woff"), url("fonts/sky_text_medium.ttf") format("truetype"), url("fonts/sky_text_medium.svg#SkyText-Medium") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SkyText-Regular";
-    src: url("fonts/sky_text_regular.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_regular.woff") format("woff"), url("fonts/sky_text_regular.ttf") format("truetype"), url("fonts/sky_text_regular.svg#SkyText-Regular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Sports-FO";
-    src: url("fonts/SSportsFo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/SSportsFo-MediumItalic.woff") format("woff"), url("fonts/SSportsFo-MediumItalic.ttf") format("truetype"), url("fonts/SSportsFo-MediumItalic.svg#Sports-FO") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: "SkyText-Regular", "Helvetica", "Arial", "Sans-Serif";
-    margin: 0;
-    padding: 0;
-    background-image: url('images/background.png');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-h2,
-h3,
-p,
-a,
-th,
-td {
-    color: #fff;
-}
-
-a {
-    text-decoration: none !important;
-}
-
-.dashboard-profile__text h2 {
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-    text-transform: uppercase;
-    padding: 20px;
-}
-
-.header__inner {
-    width: 100%;
-    min-height: 60px;
-}
-
-img.header-img {
-    width: 10%;
-    float: right;
-    margin: 30px 100px;
-}
-
-.dashboard-main {
-    display: flex;
-}
-
-main#main {
-    margin-top: 30px;
-}
-
-.dashboard-profile {
-    position: relative;
-    background-color: rgb(26, 24, 24);
-}
-
-h3.total-points {
-    width: 60%;
-    text-align: center;
-    font-size: small;
-}
-
-.dashboard-profile::before {
-    content: "";
-    background-image: url('images/profile.png');
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.9;
-}
-
-li.dashboard-race.dashboard-race--it {
-    background-image: url('images/race--it.png');
-    background-size: cover;
-    position: relative;
-    margin-bottom: 7%;
-}
-
-li.dashboard-race.dashboard-race--gb {
-    background-image: url('images/race--gb.png');
-    background-size: cover;
-    position: relative;
-    margin-bottom: 7%;
-}
-
-li.dashboard-race.dashboard-race--de {
-    background-image: url('images/race--de.png');
-    background-size: cover;
-    position: relative;
-    margin-bottom: 7%;
-}
-
-img.race-track-img {
-    width: 35%;
-}
-
-span.sub-best-score {
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-    font-size: 28px;
-    text-align: center;
-}
-
-.gp {
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-    text-transform: uppercase;
-    padding: 10px;
-}
-
-.dashboard-race__info {
-    float: right;
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-}
-
-.dashboard-race-h2 {
-    font-size: 16px;
-}
-
-span {
-    display: block;
-}
-
-.dashboard-profile__performance {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-}
-
-.dashboard-profile__helment {
-    position: absolute;
-    top: 40%;
-    right: 10%;
-}
-
-.total-score {
-    font-size: 60px;
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-}
-
-h3.sub-dashboard-profile {
-    padding: 30px;
-    font-size: 14px;
-    text-align: center;
-}
-
-.span-sub-dashboard-profile {
-    font-size: 25px;
-    font-weight: 600;
-    padding: 10px;
-}
-
-.dashboard-extra {
-    display: flex;
-}
-
-.dashboard__prize {
-    background-image: url('images/prize-bg.png');
-    background-size: cover;
-    width: 50%;
-    display: flex;
-    margin-right: 4%;
-}
-
-.dashboard__share {
-    background-image: url('images/share-bg.png');
-    background-size: cover;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.prize-img {
-    width: 50%;
-}
-
-.share-our-advert {
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-    text-transform: uppercase;
-    font-size: 22px;
-    text-align: center;
-}
-
-.win {
-    font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
-    text-transform: uppercase;
-    font-size: 40px;
-    padding: 20px;
-}
+    @font-face {
+        font-family: "SkyText-Bold";
+        src: url("fonts/sky_text_bold.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_bold.woff") format("woff"), url("fonts/sky_text_bold.ttf") format("truetype"), url("fonts/sky_text_bold.svg#SkyText-Bold") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "SkyText-Medium";
+        src: url("fonts/sky_text_medium.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_medium.woff") format("woff"), url("fonts/sky_text_medium.ttf") format("truetype"), url("fonts/sky_text_medium.svg#SkyText-Medium") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "SkyText-Regular";
+        src: url("fonts/sky_text_regular.eot?#iefix") format("embedded-opentype"), url("fonts/sky_text_regular.woff") format("woff"), url("fonts/sky_text_regular.ttf") format("truetype"), url("fonts/sky_text_regular.svg#SkyText-Regular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Sports-FO";
+        src: url("fonts/SSportsFo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/SSportsFo-MediumItalic.woff") format("woff"), url("fonts/SSportsFo-MediumItalic.ttf") format("truetype"), url("fonts/SSportsFo-MediumItalic.svg#Sports-FO") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    body {
+        font-family: "SkyText-Regular", "Helvetica", "Arial", "Sans-Serif";
+        margin: 0;
+        padding: 0;
+        background-image: url('images/background.png');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        min-height: 100%;
+    }
+    
+    h2,
+    h3,
+    p,
+    a,
+    th,
+    td {
+        color: #fff;
+    }
+    
+    a {
+        text-decoration: none !important;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    ul {
+        padding-left: 0rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .center {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    
+    .dashboard-profile__text h2 {
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        text-transform: uppercase;
+        padding: 35px;
+    }
+    
+    .header__inner {
+        justify-content: flex-end;
+    }
+    
+    img.header-img {
+        width: 14%;
+        float: right;
+        margin-top: 30px;
+    }
+    
+    .dashboard-main {
+        display: flex;
+    }
+    
+    main#main {
+        margin-top: 30px;
+    }
+    
+    .dashboard-profile {
+        position: relative;
+        background-color: rgb(26, 24, 24);
+        background-image: url('images/profile.png');
+        background-size: cover;
+    }
+    
+    h3.total-points {
+        width: 60%;
+        text-align: center;
+        font-size: 18px;
+        color: rgb(190, 190, 190);
+    }
+    
+    .dashboard-profile::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        background-color: #fff;
+        height: 7px;
+    }
+    
+    li.dashboard-race {
+        min-height: 165px;
+    }
+    
+    li.dashboard-race.dashboard-race--it {
+        background-image: url('images/race--it.png');
+        background-size: cover;
+        position: relative;
+        margin-bottom: 7%;
+    }
+    
+    li.dashboard-race.dashboard-race--gb {
+        background-image: url('images/race--gb.png');
+        background-size: cover;
+        position: relative;
+        margin-bottom: 7%;
+    }
+    
+    li.dashboard-race.dashboard-race--de {
+        background-image: url('images/race--de.png');
+        background-size: cover;
+        position: relative;
+        margin-bottom: 7%;
+    }
+    
+    img.race-track-img {
+        width: 45%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    span.sub-best-score {
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .gp {
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        text-transform: uppercase;
+        padding-top: 15px;
+        margin-left: 10px;
+        font-size: 24px;
+    }
+    
+    .dashboard-race__info {
+        float: right;
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+    }
+    
+    .dashboard-race-h2 {
+        font-size: 16px;
+    }
+    
+    span {
+        display: block;
+    }
+    
+    .dashboard-profile__performance {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    
+    .dashboard-profile__helment {
+        position: absolute;
+        top: 25%;
+        right: 10%;
+    }
+    
+    .total-score {
+        font-size: 60px;
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        color: #fff !important;
+        margin-top: 10px;
+    }
+    
+    h3.sub-dashboard-profile {
+        padding: 20px 30px;
+        font-size: 18px;
+        text-align: center;
+        color: rgb(190, 190, 190);
+    }
+    
+    .span-sub-dashboard-profile {
+        font-size: 28px;
+        font-weight: 800;
+        padding: 10px;
+        color: #fff !important;
+    }
+    
+    .dashboard-extra {
+        display: flex;
+        margin-top: 22px;
+        min-height: 165px;
+    }
+    
+    .dashboard__prize {
+        background-image: url('images/prize-bg.png');
+        background-size: cover;
+        width: 50%;
+        display: flex;
+        margin-right: 4%;
+    }
+    
+    .dashboard__share {
+        background-image: url('images/share-bg.png');
+        background-size: cover;
+        width: 50%;
+    }
+    
+    .prize-img {
+        padding-top: 7%;
+        width: 60%;
+    }
+    
+    .share-our-advert {
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        text-transform: uppercase;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .win {
+        font-family: "Sports-FO", "Helvetica", "Arial", "Sans-Serif";
+        text-transform: uppercase;
+        font-size: 38px;
+        line-height: 30px;
+    }
+    
+    h3.sub-win {
+        padding-top: 40%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;
+        line-height: 20px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #1a1818f3;
+    }
+    
+    td,
+    th {
+        text-align: center;
+        padding: 10px 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.856);
+    }
+    
+    tr:hover {
+        background-color: rgb(255, 230, 0);
+    }
+    
+    #table-board tr:hover td {
+        color: black;
+    }
+    
+    table tr:nth-child(5) {
+        background-color: rgb(255, 230, 0);
+    }
+    
+    table tr:nth-child(5) td {
+        color: black;
+    }
+    
+    .bg-yellow {
+        background-color: rgb(255, 230, 0) !important;
+    }
+    
+    .black-text {
+        color: black;
+    }
+    
+    td:nth-child(even) {
+        text-align: left;
+    }
+    
+    h2.sub-leaderboard-title {
+        background-color: red;
+        margin-bottom: 0 !important;
+        font-size: 18px;
+        background-image: linear-gradient(red, rgba(10, 10, 10, 0.726));
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+    }
+    
+    tr.user-bar {
+        background-color: rgb(70, 70, 70);
+        pointer-events: none;
+    }
+    
+    th.user {
+        text-align: left;
+    }
+    
+    .dashboard-footer.container {
+        margin-top: 15px;
+    }
+    
+    .breaking-news__ticker {
+        background-color: rgb(255, 230, 0);
+        height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .breaking-news.row {
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .span-breaking-news {
+        color: rgb(255, 230, 0);
+        background-image: linear-gradient(black, rgb(44, 44, 44), black);
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    footer.footer {
+        background-color: white;
+        margin-top: 5%;
+    }
+    
+    .footer__copyright-container {
+        display: flex;
+    }
+    
+    p.footer__copyright.col-11 {
+        color: gray;
+    }
+    
+    img.footer__main-logo {
+        width: 45%;
+    }
+    
+    li.next-news {
+        letter-spacing: 2px;
+        font-family: "SkyText-Medium";
+        font-size: 18px;
+    }
+    
+    .footer__inner.container {
+        min-height: 50px;
+        padding-top: 1%;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    @media screen and (max-width: 1200px) {
+        img.race-track-img {
+            width: 14%;
+        }
+        .dashboard-leaderboards.col {
+            margin-top: 30px;
+        }
+        .span-breaking-news {
+            font-size: 13px;
+        }
+        li.next-news {
+            font-size: 12px;
+        }
+        img.footer__main-logo {
+            width: 100%;
+        }
+        img.header-img {
+            width: 20%;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        .span-breaking-news {
+            font-size: 10px;
+        }
+        li.next-news {
+            font-size: 10px;
+        }
+        img.footer__main-logo {
+            width: 100%;
+        }
+        .footer__inner.container {
+            min-height: 30px;
+            padding-top: 1%;
+        }
+        p.footer__copyright.col-11 {
+            font-size: 8px;
+            padding-top: 5px;
+        }
+        img.header-img {
+            width: 30%;
+        }
+        img.race-track-img {
+            width: 20%;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        img.helmet {
+            width: 70%;
+        }
+        .dashboard-profile__helment {
+            right: -3%;
+        }
+        li.next-news {
+            font-size: 8px;
+        }
+    }

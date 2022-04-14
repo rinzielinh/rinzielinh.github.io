@@ -12,8 +12,8 @@
 
 <body>
 
-    <header>
-        <div class="header__inner">
+    <header class="container">
+        <div class="header__inner row">
             <img class="header-img" src="content/images/sky-sports-f1.png" alt="Sky Sports F1">
         </div>
     </header>
@@ -49,10 +49,10 @@
                         </ul>
                     </div>
 
-                    <div class="dashboard-info col-6">
+                    <div class="dashboard-info col-xxl-6 col-xl-6 col-md-12 col-sm-12">
                         <div class="dashboard-profile">
                             <div class="dashboard-profile__text">
-                                <h2>Carlos Sainz</h2>
+                                <h2 class="dashboard-name">Carlos Sainz</h2>
                                 <h3 class="total-points">Total points <span class="total-score">97</span></h3>
                                 <div class="dashboard-profile__performance">
                                     <h3 class="sub-dashboard-profile">Raced <span class="span-sub-dashboard-profile">23</span></h3>
@@ -61,18 +61,18 @@
                                 </div>
                             </div>
                             <div class="dashboard-profile__helment">
-                                <img src="content/images/helmet.png">
+                                <img class="helmet" src="content/images/helmet.png">
                             </div>
                         </div>
 
                         <div class="dashboard-extra">
                             <div class="dashboard__prize">
                                 <div>
-                                    <h3><span class="win">Win!</span> F1 Prize Bundle</h3>
+                                    <h3 class="sub-win"><span class="win">Win!</span> F1 Prize Bundle</h3>
                                 </div>
                                 <img class="prize-img" src="content/images/prize.png">
                             </div>
-                            <div class="dashboard__share">
+                            <div class="dashboard__share center">
                                 <h3 class="share-our-advert">Share our advert</h3>
                             </div>
                         </div>
@@ -80,13 +80,13 @@
 
                     <div class="dashboard-leaderboards col">
                         <div class="leaderboard-title">
-                            <h2>Leaderboard</h2>
+                            <h2 class="sub-leaderboard-title">Leaderboard</h2>
                         </div>
                         <div class="leaderboard">
-                            <table>
-                                <tr>
+                            <table id="table-board">
+                                <tr class="user-bar">
                                     <th>#</th>
-                                    <th>User</th>
+                                    <th class="user">User</th>
                                     <th>Pts</th>
                                 </tr>
                                 <tr>
@@ -144,12 +144,12 @@
                     </div>
                 </div>
 
-                <div class="dashboard-footer">
-                    <div class="breaking-news">
-                        <span>Breaking news</span>
-                        <div class="breaking-news__ticker">
+                <div class="dashboard-footer container">
+                    <div class="breaking-news row">
+                        <span class="span-breaking-news col-2 center">Breaking news</span>
+                        <div class="breaking-news__ticker col-10 center">
                             <ul>
-                                <li>Martin Schrotter from Wien has just won the British GP</li>
+                                <li class="next-news">Lewis Hamilton has just beaten Alonso in the German Grand Prix!</li>
                             </ul>
                         </div>
                     </div>
@@ -160,14 +160,46 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__inner">
-            <div class="footer__copyright-container">
-                <img class="footer__main-logo" src="content/images/sky.png" alt="Sky">
-                <p class="footer__copyright">© 2022 Sky UK</p>
+        <div class="footer__inner container">
+            <div class="footer__copyright-container row">
+                <div class="col"><img class="footer__main-logo" src="content/images/sky.png" alt="Sky"></div>
+
+                <p class="footer__copyright col-11">© 2022 Sky UK</p>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        function getAllSiblings(elem, filter) {
+            var sibs = [];
+            elem = elem.parentNode.firstChild;
+            do {
+                if (elem.nodeType === 3) continue; // text node
+                if (!filter || filter(elem)) sibs.push(elem);
+            } while (elem = elem.nextSibling)
+            return sibs;
+        }
+        document.getElementById('table-board').addEventListener('click', function handleClick(event) {
+
+            let allRows = document.querySelectorAll("tr");
+            let allTds = document.querySelectorAll("td");
+            allTds.forEach(function(ele) {
+                ele.classList.remove('black-text');
+            });
+            allRows.forEach(function(el) {
+                el.classList.remove('bg-yellow');
+            });
+            getAllSiblings(event.target).forEach(function(element) {
+                element.classList.add('black-text');
+            });
+
+
+
+
+            event.target.parentNode.classList.add('bg-yellow');
+
+        });
+    </script>
 </body>
 
 </html>
