@@ -1,0 +1,143 @@
+body {
+    padding-top: 5rem;
+}
+
+.custom-boilerplate {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.custom-boilerplate h1 {
+    margin-bottom: 1.5rem;
+}
+
+#searchbox {
+    margin-bottom: 2rem;
+}
+
+.no-results {
+    color: red;
+    size: 2rem;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.hidden {
+    display: none;
+}
+
+img.avatar {
+    width: 50%;
+}
+
+table {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    border-collapse: collapse;
+}
+
+.ten {
+    width: 10%
+}
+
+th {
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+td {
+    vertical-align: center !important;
+}
+
+a {
+    font-size: 16px;
+}
+
+.showing {
+    margin: 20px 60px;
+}
+
+.github-interface {
+    width: 290px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.github-interface__btn {
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 115px;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    border: 0.5px solid #6a737d;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.github-interface__btn:hover {
+    background-color: #f3f3f3;
+}
+
+.github-interface__btn-action {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+
+.github-interface__btn-action>span {
+    font-weight: 600;
+    color: #24292e;
+}
+
+.github-interface__icon {
+    margin-right: 5px;
+    fill: #6a737d;
+}
+
+.github-interface__counter-link {
+    position: relative;
+    font-size: 12px;
+    color: #6a737d;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #24292e;
+}
+
+.github-interface__counter-link:hover {
+    color: #2471DB;
+}
+
+.github-interface__counter-link::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -5px;
+    width: 0.5px;
+    height: 26px;
+    background-color: #6a737d;
+}
+
+form#search {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    width: 40% !important;
+}
