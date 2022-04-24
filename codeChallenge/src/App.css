@@ -141,3 +141,7 @@ form#search {
 .form-control {
     width: 40% !important;
 }
+
+ul.pagination {
+    margin-left: 35%;
+}

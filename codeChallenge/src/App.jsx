@@ -12,6 +12,7 @@ import Pagination from "react-js-pagination";
 
 
 function App() {
+  const [rating, setRating] = useState("desc");
   const [submit, setSubmit] = useState(false);
   const [activePage, setActivePage] = useState(1);
   const [queryValue, setQueryValue] = useState("")
@@ -59,7 +60,6 @@ function App() {
 
     return (
       <div className="App">
-        
         <div className="container">
           <div className="custom-boilerplate">
             <img src="https://image.freepik.com/free-icon/github-logo_318-10832.jpg" alt="abc" className="logo"/>
@@ -73,6 +73,24 @@ function App() {
          
           {submit && 
           <main>
+              <div className="showing">
+              
+              <div>
+                <div className="select">
+                  <select
+                    
+                    name=""
+                    id=""
+                    onChange={(e) => setRating(e.target.value)}
+                  >
+                    <option value="desc">Rating: High to Low</option>
+                    <option value="asc">Rating: Low to High</option>
+                    
+                  </select>
+                </div>
+              </div>
+              
+            </div>
             <Table >
             <thead>
               <tr>
@@ -87,6 +105,7 @@ function App() {
               </thead>
               
                 <List
+                  rating={rating}
                   repositories={repositories}
                 />
                
