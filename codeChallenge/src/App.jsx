@@ -36,7 +36,7 @@ function App() {
   const handlePageChange = (pageNumber) => {
     console.log(`active page is ${pageNumber}`);
     setActivePage(pageNumber);
-    const fetchAgain = fetch(`https://api.github.com/search/repositories?q=${queryValue}&per_page=25&page=${pageNumber}`);
+    const fetchAgain = fetch(`https://api.github.com/search/repositories?q=${queryValue}&sort=stars&order=desc&per_page=25&page=${pageNumber}`);
     fetchAgain
     .then((res) => {
       if (res.status === 200) {
